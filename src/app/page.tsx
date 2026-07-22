@@ -1,31 +1,41 @@
 import Container from "@/app/_components/container";
 import { HeroPost } from "@/app/_components/hero-post";
+import { HeroBrief } from "@/app/_components/briefs/hero-brief";
 import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import { MoreItems } from "@/app/_components/more-items";
+import { getAllFeedItems } from "@/lib/feed";
 
 export default function Index() {
-  const allPosts = getAllPosts();
+  const feedItems = getAllFeedItems();
 
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
+  const heroItem = feedItems[0];
+  const moreItems = feedItems.slice(1);
 
   return (
     <main>
       <Container>
         <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-          category={heroPost.category}
-          tags={heroPost.tags}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {heroItem.type === "post" ? (
+          <HeroPost
+            title={heroItem.item.title}
+            coverImage={heroItem.item.coverImage}
+            date={heroItem.item.date}
+            author={heroItem.item.author}
+            slug={heroItem.item.slug}
+            excerpt={heroItem.item.excerpt}
+            category={heroItem.item.category}
+            tags={heroItem.item.tags}
+          />
+        ) : (
+          <HeroBrief
+            title={heroItem.item.title}
+            date={heroItem.item.date}
+            excerpt={heroItem.item.excerpt}
+            authors={heroItem.item.authors}
+            slug={heroItem.item.slug}
+          />
+        )}
+        {moreItems.length > 0 && <MoreItems items={moreItems} />}
       </Container>
     </main>
   );
