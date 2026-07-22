@@ -3,9 +3,9 @@ title: "Researcher Spotlight: Astrid Behnert, M.D."
 excerpt: "What is your name, title and institutional affiliation? Astrid Behnert Department of Pediatrics, Benioff Children’s Hospital University of California, San Francisco What is your role, ie what do you do? I’m a clinician-s..."
 coverImage: "/assets/blog/researcher-spotlight-astrid-behnert/cover.png"
 date: "2022-03-21T22:00:59.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

@@ -3,9 +3,9 @@ title: "Researcher Spotlight: Sara Gosline, Ph.D."
 excerpt: "Sara Gosline. (Photography by Scott Eklund/Red Box Pictures) What is your name, title and institutional affiliation? Sara Gosline, Ph.D. Computational Biologist, Pacific Northwest National Laboratory What is your role, i..."
 coverImage: "/assets/blog/researcher-spotlight-sara-gosline/cover.png"
 date: "2022-01-10T21:00:46.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

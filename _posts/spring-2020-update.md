@@ -3,9 +3,9 @@ title: "Spring 2020 Update"
 excerpt: "Photo courtesy of National Cancer Institute. Therapeutic highlight: MEK inhibitor approved! After several years of innovative preclinical research and intensive clinical study, selumetinib was granted FDA approval for us..."
 coverImage: "/assets/blog/spring-2020-update/cover.png"
 date: "2020-04-26T22:47:57.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

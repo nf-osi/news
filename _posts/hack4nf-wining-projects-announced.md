@@ -3,9 +3,9 @@ title: "Hack4NF Winning Projects Announced"
 excerpt: "This press release was originally published on the Children's Tumor Foundation Blog on November 16, 2022. Hackathon Leveraged Genomic Datasets to Develop Drug Targets, Predict Variants and Correctly Classify Tumors for N..."
 coverImage: "/assets/blog/hack4nf-wining-projects-announced/cover.png"
 date: "2022-11-16T20:23:46.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags: []
 ogImage:

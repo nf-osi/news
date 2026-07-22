@@ -3,9 +3,9 @@ title: "SORC Travel Grantees Reflect on 2023 NF Conference"
 excerpt: "by Sasha Scott, PhD, Sage Bionetworks The Children’s Tumor Foundation, in partnership with the Schwannomatosis Open Research Collaborative (SORC), granted three travel awards to deserving researchers so that they could a..."
 coverImage: "/assets/blog/three-recipients-of-sorc-travel-grants-reflect-on-2023-nf-conference/cover.png"
 date: "2023-08-17T15:15:05.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Data Analysis"

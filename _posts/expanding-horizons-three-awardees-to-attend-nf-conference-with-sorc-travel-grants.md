@@ -3,9 +3,9 @@ title: "Expanding Horizons: Three Awardees to Attend NF Conference with SORC Tra
 excerpt: "The Schwannomatosis Open Research Collaborative (SORC) is an innovative, community-based research project aimed at utilizing publicly available data to uncover new scientific insights into the rare and understudied genet..."
 coverImage: "/assets/blog/expanding-horizons-three-awardees-to-attend-nf-conference-with-sorc-travel-grants/cover.png"
 date: "2023-04-11T18:58:02.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Funding"

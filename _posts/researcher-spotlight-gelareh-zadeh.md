@@ -3,9 +3,9 @@ title: "Researcher Spotlight: Gelareh Zadeh, M.D., Ph.D."
 excerpt: "Dr. Gelareh Zadeh, a neuroscientist at UHN and UofT, has been appointed the first female chair of neurosurgery in Canada. Photographed in her home on August 12, 2020. Kate Dockeray/Globe and Mail What is your name, title..."
 coverImage: "/assets/blog/researcher-spotlight-gelareh-zadeh/cover.png"
 date: "2021-12-08T21:00:47.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

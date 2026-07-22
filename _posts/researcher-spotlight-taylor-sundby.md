@@ -3,9 +3,9 @@ title: "Researcher Spotlight: R. Taylor Sundby, MD"
 excerpt: "What is your name, title and institutional affiliation? R. Taylor Sundby, MD Advanced Clinical Fellow Pediatric Oncology Branch, National Cancer Institute, National Institutes of Health What is your role, ie what do you..."
 coverImage: "/assets/blog/researcher-spotlight-taylor-sundby/cover.png"
 date: "2022-02-27T20:00:38.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

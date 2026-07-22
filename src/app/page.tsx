@@ -20,7 +20,7 @@ export default function Index() {
             title={heroItem.item.title}
             coverImage={heroItem.item.coverImage}
             date={heroItem.item.date}
-            author={heroItem.item.author}
+            authors={heroItem.item.authors}
             slug={heroItem.item.slug}
             excerpt={heroItem.item.excerpt}
             category={heroItem.item.category}

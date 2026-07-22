@@ -20,7 +20,7 @@ export function MoreItems({ items }: Props) {
               title={feedItem.item.title}
               coverImage={feedItem.item.coverImage}
               date={feedItem.item.date}
-              author={feedItem.item.author}
+              authors={feedItem.item.authors}
               slug={feedItem.item.slug}
               excerpt={feedItem.item.excerpt}
               category={feedItem.item.category}

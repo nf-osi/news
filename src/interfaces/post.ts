@@ -5,7 +5,7 @@ export type Post = {
   title: string;
   date: string;
   coverImage: string;
-  author: Author;
+  authors: Author[];
   excerpt: string;
   category: string;
   tags: string[];

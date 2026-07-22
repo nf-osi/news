@@ -3,9 +3,9 @@ title: "NF1 Project Seeks Study Participants"
 excerpt: "A group of Australian researchers are doing a study to learn more about cutaneous neurofibromas (benign skin lumps) in adults with NF1. They aim to understand why some people are mildly affected and other people have man..."
 coverImage: "/assets/blog/nf1-project-seeks-study-participants/cover.png"
 date: "2022-10-26T17:02:45.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

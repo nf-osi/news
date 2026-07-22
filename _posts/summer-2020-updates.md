@@ -3,9 +3,9 @@ title: "Summer 2020 Updates"
 excerpt: "NF Data Portal: major updates We’re thrilled to announce the re-release of the NF Data Portal. New features include the ability to explore studies, data, and more with interactive plots; the ability to share your search..."
 coverImage: "/assets/blog/summer-2020-updates/cover.png"
 date: "2020-06-08T22:42:46.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

@@ -3,9 +3,9 @@ title: "New Research Tools Available in the Search for Therapies for NF1"
 excerpt: "Read the full article in Scientific Data (June 12, 2018). A collaboration of the Neurofibromatosis Therapy Acceleration Program (NTAP), together with Sage Bionetworks, Johns Hopkins, NCATS and the University of Florida P..."
 coverImage: "/assets/blog/new-research-tools-available-in-the-search-for-therapies-for-nf1/cover.png"
 date: "2018-06-15T05:10:49.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags:
   - "NF News"

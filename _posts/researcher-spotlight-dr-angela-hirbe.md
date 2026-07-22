@@ -3,9 +3,9 @@ title: "Researcher Spotlight: Dr. Angela Hirbe"
 excerpt: "What is your name, title and institutional affiliation? Angela Hirbe, M.D., Ph.D. Assistant Professor of Medicine and Pediatrics Director, Adult Neurofibromatosis Clinical Program Division of Oncology, Sarcoma Section Wa..."
 coverImage: "/assets/blog/researcher-spotlight-dr-angela-hirbe/cover.png"
 date: "2021-06-23T21:52:05.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

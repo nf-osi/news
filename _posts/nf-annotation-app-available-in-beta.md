@@ -3,9 +3,9 @@ title: "NF Annotation App available in beta!"
 excerpt: "We’re thrilled to announce that the NF Annotation App - NF Data Curator - is now available in beta. NF-OSI aims to increase collaboration, fuel important discoveries, make rare disease data more accessible to the communi..."
 coverImage: "/assets/blog/nf-annotation-app-available-in-beta/cover.png"
 date: "2021-03-30T15:46:08.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

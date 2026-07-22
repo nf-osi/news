@@ -3,9 +3,9 @@ title: "Winter 2019 Updates"
 excerpt: "2nd NF Hackathon results The NF-OSI ran the 2nd ever NF Hackathon in San Francisco this past September. During this collaborative scientific event, participants explored genomic, drug screening, imaging, and other data f..."
 coverImage: "/assets/blog/winter-2019-updates/cover.png"
 date: "2019-12-18T22:56:23.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

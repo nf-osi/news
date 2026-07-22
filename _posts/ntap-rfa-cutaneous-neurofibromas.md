@@ -3,9 +3,9 @@ title: "N-TAP Announces an RFA for Biology and Therapeutic Development for NF1 A
 excerpt: "The Neurofibromatosis Therapeutic Acceleration Program (NTAP) (www.n-tap.org) is a philanthropic research entity based at Johns Hopkins University School of Medicine dedicated to the discovery of therapeutics for the per..."
 coverImage: "/assets/blog/ntap-rfa-cutaneous-neurofibromas/cover.png"
 date: "2022-04-28T15:33:44.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

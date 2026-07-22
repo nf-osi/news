@@ -3,9 +3,9 @@ title: "Apply Now: Children's Tumor Foundation 2023 Young Investigator Award"
 excerpt: "Children's Tumor Foundation is now accepting Letters of Intent (LOI) for the 2023 Young Investigator Award (YIA) program. The deadline to submit an LOI is January 4, 2023 5:00pm ET. Children's Tumor Foundation has also a..."
 coverImage: "/assets/blog/apply-now-2023-young-investigator-award/cover.png"
 date: "2022-12-07T20:11:48.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

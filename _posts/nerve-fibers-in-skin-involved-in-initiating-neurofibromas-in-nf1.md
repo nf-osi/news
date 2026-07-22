@@ -3,9 +3,9 @@ title: "Nerve Fibers in Skin Involved in Initiating Neurofibromas in NF1"
 excerpt: "Contact Information: Frank L. Rice, PhD President, CEO and Chief Scientist Integrated Tissue Dynamics, LLC 7 University Place, Suite B236 Rensselaer, NY 12144 frankrice@intidyn.com www.INTiDYN.com \\[Partner Press Release..."
 coverImage: "/assets/blog/nerve-fibers-in-skin-involved-in-initiating-neurofibromas-in-nf1/cover.png"
 date: "2019-05-20T05:39:41.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags:
   - "NF News"

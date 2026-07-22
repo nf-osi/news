@@ -3,9 +3,9 @@ title: "Upcoming Talks on NF"
 excerpt: "Wondering what's new in NF research? The NF research community is sharing their knowledge with the world. Check out the following events. INFER: Masterclasses in NF from Children's Tumor Foundation Europe October 6th - D..."
 coverImage: "/assets/blog/upcoming-talks-ctf-gff/cover.png"
 date: "2021-10-08T15:29:51.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

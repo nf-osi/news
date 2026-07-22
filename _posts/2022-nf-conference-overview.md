@@ -3,9 +3,9 @@ title: "2022 NF Conference Overview"
 excerpt: "The NF-OSI team from Sage Bionetworks presented three different open-science focused projects at the 2022 NF Conference in Philadelphia, PA between June 18-21. Didn’t attend the conference? Learn more about these present..."
 coverImage: "/assets/blog/2022-nf-conference-overview/cover.png"
 date: "2022-07-14T17:37:34.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Publication"

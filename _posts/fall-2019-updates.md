@@ -3,9 +3,9 @@ title: "Fall 2019 Updates"
 excerpt: "2nd NF Hackathon: Sept. 13-15 in San Francisco Reminder: A collaborative research event is happening in San Francisco on September 13-15, 2019, one week prior to the 2019 NF Conference. Following in the footsteps of the..."
 coverImage: "/assets/blog/fall-2019-updates/cover.png"
 date: "2019-08-29T23:58:36.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

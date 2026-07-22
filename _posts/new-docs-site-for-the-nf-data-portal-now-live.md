@@ -3,9 +3,9 @@ title: "New Docs Site for the NF Data Portal now LIVE!"
 excerpt: "We want the NF Data Portal to be as open and easy to use as possible. To that end, we just launched a new docs site full of documentation to help you learn how to find, share, and use data on the NF Data Portal. Some hig..."
 coverImage: "/assets/blog/new-docs-site-for-the-nf-data-portal-now-live/cover.jpg"
 date: "2021-05-20T17:29:58.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

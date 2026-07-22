@@ -3,9 +3,9 @@ title: "Big Shift in U.S. Policy Regarding Open Access of Scientific Research"
 excerpt: "The Biden Administration announced a new requirement, to be implemented as soon as the end of 2025, that the results of all scientific research be made available publicly as soon as that research is published. This chang..."
 coverImage: "/assets/blog/big-shift-in-u-s-policy-regarding-open-access-of-scientific-research/cover.png"
 date: "2022-10-18T00:00:35.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Data Sharing"

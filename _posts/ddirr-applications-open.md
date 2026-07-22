@@ -3,9 +3,9 @@ title: "Apply for the Drug Discovery Initiative Registered Reports Award Program
 excerpt: "Applications are now open for the Children's Tumor Foundation's (CTF) 2021 cycle of Drug Discovery Initiative Registered Reports (DDIRR) award program, a program to fund early stage testing of candidate drug therapies fo..."
 coverImage: "/assets/blog/ddirr-applications-open/cover.png"
 date: "2020-11-13T23:07:59.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

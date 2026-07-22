@@ -3,9 +3,9 @@ title: "Researcher Spotlight: David A. Largaespada, Ph.D."
 excerpt: "What is your name, title and institutional affiliation? David A. Largaespada, Ph.D., Professor, Masonic Cancer Center, University of Minnesota What is your role, i.e., what do you do? I am the Associate Director for Basi..."
 coverImage: "/assets/blog/researcher-spotlight-david-a-largaespada-ph-d/cover.png"
 date: "2021-08-16T22:00:36.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

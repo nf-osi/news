@@ -1,6 +1,6 @@
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
-import Avatar from "./avatar";
+import Authors from "./authors";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { PostTaxonomy } from "./post-taxonomy";
@@ -10,7 +10,7 @@ type Props = {
   coverImage: string;
   date: string;
   excerpt: string;
-  author: Author;
+  authors: Author[];
   slug: string;
   category: string;
   tags: string[];
@@ -21,7 +21,7 @@ export function PostPreview({
   coverImage,
   date,
   excerpt,
-  author,
+  authors,
   slug,
   category,
   tags,
@@ -41,7 +41,7 @@ export function PostPreview({
         <DateFormatter dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      <Authors authors={authors} />
     </div>
   );
 }

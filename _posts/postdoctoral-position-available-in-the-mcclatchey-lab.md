@@ -3,9 +3,9 @@ title: "Postdoctoral Position Available in the McClatchey Lab"
 excerpt: "The McClatchey lab is seeking postdoctoral research fellows who are enthusiastic, motivated, and like to think outside the box to join our NF2/schwannomatosis team. In collaboration with the Giovannini (UCLA) and Stott (..."
 coverImage: "/assets/blog/postdoctoral-position-available-in-the-mcclatchey-lab/cover.png"
 date: "2023-01-25T18:47:17.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Opportunity"

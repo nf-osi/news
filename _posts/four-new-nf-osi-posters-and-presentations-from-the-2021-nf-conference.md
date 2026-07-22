@@ -3,9 +3,9 @@ title: "Four New NF-OSI Posters and Presentations from the 2021 NF Conference"
 excerpt: "At the 2021 Virtual NF Conference, hosted by the Children's Tumor Foundation, three members of the NF-OSI from Sage Bionetworks presented posters. Senior Scientist Robert Allaway presented a poster reflecting on the new..."
 coverImage: "/assets/blog/four-new-nf-osi-posters-and-presentations-from-the-2021-nf-conference/cover.png"
 date: "2021-07-26T22:05:15.000Z"
-author:
-  name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: Amber Nelson
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

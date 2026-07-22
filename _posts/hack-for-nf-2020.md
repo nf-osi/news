@@ -3,9 +3,9 @@ title: "Hack for NF 2020"
 excerpt: "Do you want to advance the field of neurofibromatosis (NF) and rare diseases? Hack for NF, and be part of developing solutions to end rare diseases! Hackers present rare disease solutions at the 2019 NF Hackathon in San..."
 coverImage: "/assets/blog/hack-for-nf-2020/cover.png"
 date: "2020-09-22T18:30:31.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

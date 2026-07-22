@@ -3,9 +3,9 @@ title: "Summer 2019 Updates"
 excerpt: "New datasets available on the NF Data Portal The Synodos for NF2 project, led by Drs. Wade Clapp, James Gusella, Scott Plotkin, and Jaishri Blakeley, recently had its final data release. There are several new publicly av..."
 coverImage: "/assets/blog/summer-2019-updates/cover.png"
 date: "2019-06-25T00:02:18.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

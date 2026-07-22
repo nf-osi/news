@@ -3,9 +3,9 @@ title: "Spring 2019 Updates"
 excerpt: "The NF Open Science Initiative has had a busy start to 2019. A few updates: New NF1 and NF2-related datasets now available on the NF Data Portal This quarter marks the release of several new datasets that are now availab..."
 coverImage: "/assets/blog/spring-2019-updates/cover.png"
 date: "2019-04-07T22:26:20.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

@@ -3,9 +3,9 @@ title: "Uncovering Therapeutic Strategies for Neurofibromatosis Type 1"
 excerpt: "By Jineta Banerjee and Robert Allaway Drug discovery studies are challenging to conduct for rare diseases because there often isn’t enough relevant biological data. Small, or underpowered, datasets hinder the effectivene..."
 coverImage: "/assets/blog/uncovering-therapeutic-strategies-for-neurofibromatosis-type-1/cover.png"
 date: "2020-02-26T05:47:00.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

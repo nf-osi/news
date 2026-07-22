@@ -3,9 +3,9 @@ title: "Apply to the Francis S. Collins Scholars Program"
 excerpt: "In 1990, Dr. Francis S. Collins led the team that discovered the NF1 gene. Now it's your turn to join the team that discovers the cure. The Francis S. Collins Scholars Program in Neurofibromatosis Clinical & Translationa..."
 coverImage: "/assets/blog/francis-s-collins-scholars/cover.png"
 date: "2020-09-16T21:44:26.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

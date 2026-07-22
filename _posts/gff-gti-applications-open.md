@@ -3,9 +3,9 @@ title: "Apply for the Gene Therapy Initiative Team Science Award Program"
 excerpt: "The Gilbert Family Foundation’s (GFF) Gene Therapy Initiative is accepting proposals for high-impact research on gene therapy strategies aimed at addressing the loss of neurofibromin 1 (NF1) gene function in neurofibroma..."
 coverImage: "/assets/blog/gff-gti-applications-open/cover.png"
 date: "2021-02-19T16:24:57.000Z"
-author:
-  name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.svg"
+authors:
+  - name: NF-OSI
+    picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

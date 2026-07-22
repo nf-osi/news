@@ -18,9 +18,9 @@ See "Adding a new post" and "Adding a new research brief" below for each.
    excerpt: "A short summary shown on the homepage and in link previews."
    coverImage: "/assets/blog/my-new-post/cover.png"
    date: "2026-07-21T00:00:00.000Z"
-   author:
-     name: Your Name
-     picture: "/assets/blog/authors/nf-osi.svg"
+   authors:
+     - name: Your Name
+       picture: "/assets/blog/authors/nf-osi.svg"
    category: "Blog Post"
    tags:
      - "Featured"
@@ -30,6 +30,8 @@ See "Adding a new post" and "Adding a new research brief" below for each.
 
    Post content goes here, in Markdown.
    ```
+
+   `authors` is a list — add another entry for a co-authored post.
 
 3. Put the cover image at `public/assets/blog/my-new-post/cover.png` (create the directory). Reuse `/assets/blog/authors/nf-osi.svg` for the author picture unless the author has their own.
 4. Run `npm run dev` and check `http://localhost:3000` before committing.
