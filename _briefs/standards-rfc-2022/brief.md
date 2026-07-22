@@ -54,7 +54,7 @@ The data-sharing specifications highlighted in this document have been informed 
 
 As a representation of the most recent funder requirements and RFC results, Table 1 summarizes specifications for common data types that are of interest for the NF community. These standards should apply for most general cases. However, we do note that for some data types, the community provided additional considerations that serve to qualify or supplement what is in this table (see [Additional considerations](#additional-considerations)). This qualitative feedback point to certain data domains that may need deeper evaluation. Alongside the qualitative results, quantitative breakdowns for components of the RFC are available (see [RFC statistics](#rfc-statistics)).
 
-<!-- include: rfc-brief.table.html -->
+<!-- include: table.html -->
 
 ## Additional considerations
 
@@ -82,7 +82,7 @@ This is actually asking a different design question – not necessarily "What le
 
 ### Respondent profiles
 
-<!-- include: rfc-brief.fig1.html -->
+<!-- include: fig1.html -->
 
 Figure 1 summarizes the representation of different demographic types as self-reported through the question _"What 'type' of NF research community member are you?"_ Because respondents could indicate more than one demographic type, a statistic of 43% here should be interpreted to mean that 43% of the responses represented the clinician perspective. Overall, the RFC garnered highest representation from bench scientists and clinicians, which was expected. That clinicians had nearly as much representation as bench scientists likely reflects the highly translational focus of the NF Data Portal community relative to more general data repositories.
 
@@ -92,15 +92,15 @@ In the RFC, we did not distinguish whether respondents considered themselves mor
 
 Figure 2 summarizes responses to the question _"Should it be required to deposit raw data?"_ for the different assay or different type categories. There were four categories that reached majority consensus for sharing: in vivo growth tumor data, Sanger sequencing, structured clinical data, and western blot.
 
-<!-- include: rfc-brief.fig2.html -->
+<!-- include: fig2.html -->
 
 Figure 3 summarizes responses to the question _"Have you ever re-analyzed this type of data, or wanted to, if the right dataset existed?"_ for the different assay or different type categories. The highest interest was for structured clinical data, which also garnered the strongest consensus that it should be shared (Fig 2).
 
-<!-- include: rfc-brief.fig3.html -->
+<!-- include: fig3.html -->
 
 Figure 4 summarizes responses to the question _"Have you previously been required to share a complete raw dataset by a funder or journal?"_ The responses suggest that funder or journal sharing requirements for these assays or data types are not common, except for perhaps structured clinical data and western blots. Compared to ratings in Fig 2, the results here also suggest that the community is willing to go beyond the "baseline" requirements of funders or journals.
 
-<!-- include: rfc-brief.fig4.html -->
+<!-- include: fig4.html -->
 
 ## References
 

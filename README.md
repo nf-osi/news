@@ -75,7 +75,7 @@ Conventions:
 
 Research briefs are a separate content type from blog posts — multi-author scientific documents (specs, RFC summaries, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, completely independent of the blog pipeline (`_posts/`, `Post`, categories/tags).
 
-1. Create `_briefs/<slug>.md` with front matter:
+1. Create `_briefs/<slug>/brief.md` with front matter:
 
    ```md
    ---
@@ -99,17 +99,17 @@ Research briefs are a separate content type from blog posts — multi-author sci
 
    `url`, `affiliation`, `affiliationUrl`, `orcid`, and `communityContributors` are all optional.
 
-2. **Raw HTML (tables, figures)**: `remark-html`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to the `.md` (e.g. `_briefs/<slug>.table.html`, `_briefs/<slug>.fig1.html`) and reference it from the Markdown body with an include marker on its own line:
+2. **Raw HTML (tables, figures)**: `remark-html`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to `brief.md` (e.g. `_briefs/<slug>/table.html`, `_briefs/<slug>/fig1.html`) and reference it from the Markdown body with an include marker on its own line:
 
    ```md
-   <!-- include: your-slug.table.html -->
+   <!-- include: table.html -->
    ```
 
    `src/lib/briefMarkdownToHtml.ts` splices the referenced file's contents in verbatim at that exact spot — the surrounding prose still renders through the normal Markdown pipeline, but the included file is never sanitized. Figure images referenced from an include file go in `public/assets/briefs/<slug>/`.
 
 3. Run `npm run dev` and check `http://localhost:3000/briefs/<slug>` before committing.
 
-Briefs are sorted by `date` descending on the `/briefs` index. See `_briefs/rfc-brief.md` (with `rfc-brief.table.html` and `rfc-brief.fig1.html`–`fig4.html`) for a full worked example, migrated from [nf-osi.github.io/research/rfc-brief.html](https://nf-osi.github.io/research/rfc-brief.html).
+Briefs are sorted by `date` descending on the `/briefs` index. See `_briefs/standards-rfc-2022/brief.md` (with `table.html` and `fig1.html`–`fig4.html`) for a full worked example, migrated from [nf-osi.github.io/research/rfc-brief.html](https://nf-osi.github.io/research/rfc-brief.html).
 
 ## Development
 
@@ -123,7 +123,7 @@ npm run start    # serve the production build
 ## Project structure
 
 - `_posts/` — one Markdown file per blog post, with YAML front matter.
-- `_briefs/` — one Markdown file per research brief, plus sibling `.html` files for raw table/figure includes (see "Adding a new research brief").
+- `_briefs/` — one folder per research brief; each folder contains `brief.md` plus any sibling `.html` include files (see "Adding a new research brief").
 - `src/app/` — Next.js App Router pages: `/`, `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]` (blog), and `/briefs`, `/briefs/[slug]` (research briefs).
 - `src/app/_components/` — page components (post previews, headers, taxonomy pills, etc); brief-specific components live in `src/app/_components/briefs/`.
 - `src/lib/api.ts` — reads `_posts/`, exposes `getAllPosts`, `getPostsByCategory`, `getPostsByTag`, etc.
