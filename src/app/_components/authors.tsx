@@ -11,7 +11,7 @@ const Authors = ({ authors }: Props) => {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-wrap items-center gap-4">
       {authors.map((author) => (
         <Avatar key={author.name} name={author.name} picture={author.picture} />
       ))}

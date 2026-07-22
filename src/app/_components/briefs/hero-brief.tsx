@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { type BriefAuthor } from "@/interfaces/research-brief";
-import Avatar from "@/app/_components/avatar";
+import Authors from "@/app/_components/authors";
 import DateFormatter from "@/app/_components/date-formatter";
 
 type Props = {
@@ -30,9 +30,11 @@ export function HeroBrief({ title, date, excerpt, authors, slug }: Props) {
         </div>
         <div>
           {excerpt && <p className="text-lg leading-relaxed mb-4">{excerpt}</p>}
-          <Avatar
-            name={authors.map((author) => author.name).join(", ")}
-            picture="/assets/blog/authors/nf-osi.svg"
+          <Authors
+            authors={authors.map((author) => ({
+              name: author.name,
+              picture: "/assets/blog/authors/nf-osi.svg",
+            }))}
           />
         </div>
       </div>
