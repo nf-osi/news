@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { briefsDirectory, getAllBriefs, getBriefBySlug } from "@/lib/briefs";
+import { getAllBriefs, getBriefBySlug } from "@/lib/briefs";
 import { SITE_NAME } from "@/lib/constants";
 import briefMarkdownToHtml from "@/lib/briefMarkdownToHtml";
 import { addHeadingIds, extractTableOfContents } from "@/lib/tableOfContents";
@@ -25,7 +25,7 @@ export default async function Brief(props: Params) {
   const rawContent = brief.content || "";
   const tocEntries = extractTableOfContents(rawContent);
   const content = addHeadingIds(
-    await briefMarkdownToHtml(rawContent, briefsDirectory),
+    await briefMarkdownToHtml(rawContent, brief.contentDir || ""),
   );
 
   return (

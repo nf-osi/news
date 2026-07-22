@@ -1,4 +1,5 @@
 import { type BriefAuthor } from "@/interfaces/research-brief";
+import { withBasePath } from "@/lib/base-path";
 
 type Props = {
   authors: BriefAuthor[];
@@ -42,7 +43,7 @@ export function BriefByline({ authors, communityContributors }: Props) {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/assets/briefs/orcid-icon.png"
+                  src={withBasePath("/assets/briefs/orcid-icon.png")}
                   alt="ORCID ID"
                   width={16}
                   height={16}

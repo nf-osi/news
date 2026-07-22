@@ -16,4 +16,5 @@ export type ResearchBrief = {
   communityContributors?: string[];
   excerpt?: string;
   content: string;
+  contentDir?: string;
 };
