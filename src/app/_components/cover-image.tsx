@@ -6,16 +6,16 @@ import { withBasePath } from "@/lib/base-path";
 type Props = {
   title: string;
   src: string;
-  slug?: string;
+  href?: string;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, href }: Props) => {
   const image = (
     <Image
       src={withBasePath(src)}
       alt={`Cover Image for ${title}`}
       className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
+        "hover:shadow-lg transition-shadow duration-200": href,
       })}
       width={1300}
       height={630}
@@ -23,8 +23,8 @@ const CoverImage = ({ title, src, slug }: Props) => {
   );
   return (
     <div className="sm:mx-0">
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+      {href ? (
+        <Link href={href} aria-label={title}>
           {image}
         </Link>
       ) : (

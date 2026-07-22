@@ -33,6 +33,7 @@ export function MoreItems({ items }: Props) {
               date={feedItem.item.date}
               excerpt={feedItem.item.excerpt}
               authors={feedItem.item.authors}
+              tags={feedItem.item.tags}
               slug={feedItem.item.slug}
             />
           ),

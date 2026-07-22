@@ -29,7 +29,7 @@ export function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage href={`/posts/${slug}`} title={title} src={coverImage} />
       </div>
       <PostTaxonomy category={category} tags={tags} />
       <h3 className="text-3xl mb-3 leading-snug">

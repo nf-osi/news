@@ -11,7 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Next.js blog starter template (App Router, TypeScript, Tailwind CSS) as the foundation for this site.
 - Category and tag taxonomy: every post has one `category` and zero or more `tags`, each with an auto-generated listing page at `/categories/<slug>` and `/tags/<slug>`.
 - WordPress migration script (`scripts/migrate-wordpress.mjs`) that converts a WXR export into `_posts/*.md`, reconstructing paragraph/heading structure, stripping Fusion Builder/Avada shortcodes, and downloading cover images.
-- All 33 posts from the original `news.nfdataportal.org` WordPress site, migrated to Markdown.
+- All 33 posts migrated to markdown from the original `news.nfdataportal.org` WordPress site.
+- Custom page template for research brief-type post.
+- One of two research articles migrated from `nf-osi/research` repo.
 - Custom NF-OSI author avatar (`public/assets/blog/authors/nf-osi.svg`).
 - `README.md` documenting the authoring workflow, current categories/tags, and the WordPress migration.
 

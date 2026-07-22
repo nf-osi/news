@@ -3,6 +3,8 @@ title: "Data sharing specifications for the NF community"
 status: "Current standard"
 version: "1.1.0"
 date: "2022-09-02T00:00:00.000Z"
+tags:
+  - "Data Standards"
 authors:
   - name: Robert Allaway
     url: "https://github.com/allaway"

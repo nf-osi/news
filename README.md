@@ -34,7 +34,7 @@ See "Adding a new post" and "Adding a new research brief" below for each.
    `authors` is a list — add another entry for a co-authored post.
 
 3. Put the cover image at `public/assets/blog/my-new-post/cover.png` (create the directory). Reuse `/assets/blog/authors/nf-osi.svg` for the author picture unless the author has their own.
-4. Run `npm run dev` and check `http://localhost:3000` before committing.
+4. Run `npm run dev` and check `http://localhost:3000/news` before committing.
 
 Posts are sorted by `date` descending; the most recent post becomes the homepage hero.
 
@@ -48,10 +48,11 @@ Current categories:
 - `Newsletter`
 - `Press Release`
 
-Current tags:
+Current tags (shared with research briefs — see below):
 
 - `Data Analysis`
 - `Data Sharing`
+- `Data Standards`
 - `Featured`
 - `Francis S Collins Scholars`
 - `Funding`
@@ -73,7 +74,7 @@ Conventions:
 
 ## Adding a new research brief
 
-Research briefs are a separate content type from blog posts — multi-author scientific documents (specs, RFC summaries, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, completely independent of the blog pipeline (`_posts/`, `Post`, categories/tags).
+Research briefs are a separate content type from blog posts — multi-author scientific documents (specs, RFC summaries, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, independent of the blog pipeline (`_posts/`, `Post`, categories) except for `tags`, which are shared with blog posts through the same `/tags/<slug>` pages.
 
 1. Create `_briefs/<slug>/brief.md` with front matter:
 
@@ -92,12 +93,14 @@ Research briefs are a separate content type from blog posts — multi-author sci
    communityContributors:
      - Contributor Name
    excerpt: "A short summary for the /briefs index."
+   tags:
+     - "Data Standards"
    ---
 
    Body content goes here, in Markdown.
    ```
 
-   `url`, `affiliation`, `affiliationUrl`, `orcid`, and `communityContributors` are all optional.
+   `url`, `affiliation`, `affiliationUrl`, `orcid`, `communityContributors`, and `tags` are all optional. `tags` uses the same tag list as blog posts (see "Categories and tags" above).
 
 2. **Raw HTML (tables, figures)**: `remark-html`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to `brief.md` (e.g. `_briefs/<slug>/table.html`, `_briefs/<slug>/fig1.html`) and reference it from the Markdown body with an include marker on its own line:
 

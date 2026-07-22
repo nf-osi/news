@@ -32,6 +32,7 @@ export default function Index() {
             date={heroItem.item.date}
             excerpt={heroItem.item.excerpt}
             authors={heroItem.item.authors}
+            tags={heroItem.item.tags}
             slug={heroItem.item.slug}
           />
         )}

@@ -10,6 +10,7 @@ import { PostTitle } from "@/app/_components/post-title";
 import { PostBody } from "@/app/_components/post-body";
 import { BriefMeta } from "@/app/_components/briefs/brief-meta";
 import { BriefByline } from "@/app/_components/briefs/brief-byline";
+import { BriefTags } from "@/app/_components/briefs/brief-tags";
 import { BriefToc } from "@/app/_components/briefs/brief-toc";
 import DateFormatter from "@/app/_components/date-formatter";
 import researchBriefStyles from "@/app/_components/research-brief-styles.module.css";
@@ -35,6 +36,11 @@ export default async function Brief(props: Params) {
         <article className="mb-32">
           <PostTitle>{brief.title}</PostTitle>
           <div className="max-w-4xl mx-auto mb-12">
+            {brief.tags && brief.tags.length > 0 && (
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <BriefTags tags={brief.tags} />
+              </div>
+            )}
             <BriefMeta status={brief.status} version={brief.version} />
             <BriefByline
               authors={brief.authors}

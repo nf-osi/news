@@ -15,6 +15,7 @@ export type ResearchBrief = {
   authors: BriefAuthor[];
   communityContributors?: string[];
   excerpt?: string;
+  tags?: string[];
   content: string;
   contentDir?: string;
 };

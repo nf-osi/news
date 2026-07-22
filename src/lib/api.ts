@@ -1,8 +1,10 @@
 import { Post } from "@/interfaces/post";
+import { FeedItem } from "@/interfaces/feed-item";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 import { slugify } from "@/lib/taxonomy";
+import { getAllBriefs } from "@/lib/briefs";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -49,11 +51,23 @@ export function getAllTags() {
       tags.set(slugify(tag), tag);
     }
   }
+  for (const brief of getAllBriefs()) {
+    for (const tag of brief.tags || []) {
+      tags.set(slugify(tag), tag);
+    }
+  }
   return Array.from(tags, ([slug, name]) => ({ slug, name }));
 }
 
-export function getPostsByTag(tagSlug: string): Post[] {
-  return getAllPosts().filter((post) =>
-    post.tags.some((tag) => slugify(tag) === tagSlug),
+export function getFeedItemsByTag(tagSlug: string): FeedItem[] {
+  const posts: FeedItem[] = getAllPosts()
+    .filter((post) => post.tags.some((tag) => slugify(tag) === tagSlug))
+    .map((item) => ({ type: "post", item }));
+  const briefs: FeedItem[] = getAllBriefs()
+    .filter((brief) => (brief.tags || []).some((tag) => slugify(tag) === tagSlug))
+    .map((item) => ({ type: "brief", item }));
+
+  return [...posts, ...briefs].sort((a, b) =>
+    a.item.date > b.item.date ? -1 : 1,
   );
 }
