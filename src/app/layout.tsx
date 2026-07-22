@@ -48,18 +48,18 @@ export default function RootLayout({
         <link
           rel="mask-icon"
           href={withBasePath("/favicon/safari-pinned-tab.svg")}
-          color="#000000"
+          color="#1c3f57"
         />
         <link
           rel="shortcut icon"
           href={withBasePath("/favicon/favicon.ico")}
         />
-        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileColor" content="#1c3f57" />
         <meta
           name="msapplication-config"
           content={withBasePath("/favicon/browserconfig.xml")}
         />
-        <meta name="theme-color" content="#000" />
+        <meta name="theme-color" content="#1c3f57" />
         <link
           rel="alternate"
           type="application/rss+xml"
