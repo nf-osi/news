@@ -5,7 +5,7 @@ coverImage: "/assets/blog/applications-2023-fellowship/cover.png"
 date: "2022-11-01T22:55:38.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Funding"

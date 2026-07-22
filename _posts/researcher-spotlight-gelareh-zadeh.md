@@ -5,7 +5,7 @@ coverImage: "/assets/blog/researcher-spotlight-gelareh-zadeh/cover.png"
 date: "2021-12-08T21:00:47.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

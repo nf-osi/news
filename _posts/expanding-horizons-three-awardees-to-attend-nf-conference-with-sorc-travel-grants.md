@@ -5,7 +5,7 @@ coverImage: "/assets/blog/expanding-horizons-three-awardees-to-attend-nf-confere
 date: "2023-04-11T18:58:02.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Funding"

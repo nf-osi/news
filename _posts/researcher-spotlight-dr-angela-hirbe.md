@@ -5,7 +5,7 @@ coverImage: "/assets/blog/researcher-spotlight-dr-angela-hirbe/cover.png"
 date: "2021-06-23T21:52:05.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

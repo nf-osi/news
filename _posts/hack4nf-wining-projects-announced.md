@@ -5,7 +5,7 @@ coverImage: "/assets/blog/hack4nf-wining-projects-announced/cover.png"
 date: "2022-11-16T20:23:46.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags: []
 ogImage:

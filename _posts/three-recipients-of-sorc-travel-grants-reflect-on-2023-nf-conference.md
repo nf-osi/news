@@ -5,7 +5,7 @@ coverImage: "/assets/blog/three-recipients-of-sorc-travel-grants-reflect-on-2023
 date: "2023-08-17T15:15:05.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Data Analysis"

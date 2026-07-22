@@ -5,7 +5,7 @@ coverImage: "/assets/blog/winter-2019-updates/cover.png"
 date: "2019-12-18T22:56:23.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Newsletter"
 tags:
   - "NF News"

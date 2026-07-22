@@ -5,7 +5,7 @@ coverImage: "/assets/blog/postdoctoral-position-available-in-the-mcclatchey-lab/
 date: "2023-01-25T18:47:17.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Opportunity"

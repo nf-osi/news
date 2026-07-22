@@ -5,7 +5,7 @@ coverImage: "/assets/blog/uncovering-therapeutic-strategies-for-neurofibromatosi
 date: "2020-02-26T05:47:00.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

@@ -5,7 +5,7 @@ coverImage: "/assets/blog/gff-gti-applications-open/cover.png"
 date: "2021-02-19T16:24:57.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

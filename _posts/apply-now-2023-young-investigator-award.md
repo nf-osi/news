@@ -5,7 +5,7 @@ coverImage: "/assets/blog/apply-now-2023-young-investigator-award/cover.png"
 date: "2022-12-07T20:11:48.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

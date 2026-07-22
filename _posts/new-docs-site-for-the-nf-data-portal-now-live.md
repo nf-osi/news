@@ -5,7 +5,7 @@ coverImage: "/assets/blog/new-docs-site-for-the-nf-data-portal-now-live/cover.jp
 date: "2021-05-20T17:29:58.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

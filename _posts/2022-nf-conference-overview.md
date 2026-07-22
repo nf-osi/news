@@ -5,7 +5,7 @@ coverImage: "/assets/blog/2022-nf-conference-overview/cover.png"
 date: "2022-07-14T17:37:34.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Publication"

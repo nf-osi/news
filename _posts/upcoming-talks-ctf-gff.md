@@ -5,7 +5,7 @@ coverImage: "/assets/blog/upcoming-talks-ctf-gff/cover.png"
 date: "2021-10-08T15:29:51.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

@@ -5,7 +5,7 @@ coverImage: "/assets/blog/big-shift-in-u-s-policy-regarding-open-access-of-scien
 date: "2022-10-18T00:00:35.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Data Sharing"

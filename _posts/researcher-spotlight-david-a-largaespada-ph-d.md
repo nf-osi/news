@@ -5,7 +5,7 @@ coverImage: "/assets/blog/researcher-spotlight-david-a-largaespada-ph-d/cover.pn
 date: "2021-08-16T22:00:36.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

@@ -289,7 +289,7 @@ async function main() {
       `date: "${isoDate}"`,
       "author:",
       `  name: ${authorName}`,
-      `  picture: "/assets/blog/authors/nf-osi.png"`,
+      `  picture: "/assets/blog/authors/nf-osi.svg"`,
       `category: "${yamlEscape(categoryName)}"`,
       tags.length > 0 ? "tags:" : "tags: []",
       ...tags.map((tag) => `  - "${yamlEscape(tag)}"`),

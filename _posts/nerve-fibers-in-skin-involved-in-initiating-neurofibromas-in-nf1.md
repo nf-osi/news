@@ -5,7 +5,7 @@ coverImage: "/assets/blog/nerve-fibers-in-skin-involved-in-initiating-neurofibro
 date: "2019-05-20T05:39:41.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags:
   - "NF News"

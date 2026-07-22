@@ -5,7 +5,7 @@ coverImage: "/assets/blog/nf-annotation-app-available-in-beta/cover.png"
 date: "2021-03-30T15:46:08.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

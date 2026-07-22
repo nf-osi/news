@@ -5,7 +5,7 @@ coverImage: "/assets/blog/four-new-nf-osi-posters-and-presentations-from-the-202
 date: "2021-07-26T22:05:15.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:

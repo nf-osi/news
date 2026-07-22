@@ -5,7 +5,7 @@ coverImage: "/assets/blog/francis-s-collins-scholars/cover.png"
 date: "2020-09-16T21:44:26.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

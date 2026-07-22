@@ -15,7 +15,7 @@ A statically generated blog for the [NF Open Science Initiative](https://nf.syna
    date: "2026-07-21T00:00:00.000Z"
    author:
      name: Your Name
-     picture: "/assets/blog/authors/nf-osi.png"
+     picture: "/assets/blog/authors/nf-osi.svg"
    category: "Blog Post"
    tags:
      - "Featured"
@@ -26,7 +26,7 @@ A statically generated blog for the [NF Open Science Initiative](https://nf.syna
    Post content goes here, in Markdown.
    ```
 
-3. Put the cover image at `public/assets/blog/my-new-post/cover.png` (create the directory). Reuse `/assets/blog/authors/nf-osi.png` for the author picture unless the author has their own.
+3. Put the cover image at `public/assets/blog/my-new-post/cover.png` (create the directory). Reuse `/assets/blog/authors/nf-osi.svg` for the author picture unless the author has their own.
 4. Run `npm run dev` and check `http://localhost:3000` before committing.
 
 Posts are sorted by `date` descending; the most recent post becomes the homepage hero.
@@ -62,8 +62,7 @@ Current tags:
 Conventions:
 
 - Tags are title case (`Funding`, not `funding`), except acronyms (`NF1`, `NF News`).
-- Don't add a tag that just repeats the category — pick the category instead.
-- Reuse an existing category/tag if one already fits; only introduce a new one if the post genuinely doesn't fit the current set.
+- Reuse an existing category/tag if one already fits; introduce a new one if the post genuinely doesn't fit the current set.
 
 ## Development
 

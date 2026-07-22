@@ -5,7 +5,7 @@ coverImage: "/assets/blog/ntap-rfa-cutaneous-neurofibromas/cover.png"
 date: "2022-04-28T15:33:44.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

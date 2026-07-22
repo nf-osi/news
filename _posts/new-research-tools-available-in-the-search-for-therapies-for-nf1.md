@@ -5,7 +5,7 @@ coverImage: "/assets/blog/new-research-tools-available-in-the-search-for-therapi
 date: "2018-06-15T05:10:49.000Z"
 author:
   name: NF-OSI
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Press Release"
 tags:
   - "NF News"

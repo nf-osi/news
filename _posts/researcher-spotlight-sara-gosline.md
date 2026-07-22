@@ -5,7 +5,7 @@ coverImage: "/assets/blog/researcher-spotlight-sara-gosline/cover.png"
 date: "2022-01-10T21:00:46.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

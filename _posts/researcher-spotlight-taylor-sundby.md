@@ -5,7 +5,7 @@ coverImage: "/assets/blog/researcher-spotlight-taylor-sundby/cover.png"
 date: "2022-02-27T20:00:38.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
   - "Featured"

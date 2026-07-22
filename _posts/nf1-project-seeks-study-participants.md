@@ -5,7 +5,7 @@ coverImage: "/assets/blog/nf1-project-seeks-study-participants/cover.png"
 date: "2022-10-26T17:02:45.000Z"
 author:
   name: Amber Nelson
-  picture: "/assets/blog/authors/nf-osi.png"
+  picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags: []
 ogImage:
