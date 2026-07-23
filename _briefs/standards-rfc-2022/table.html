@@ -1,0 +1,201 @@
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:table-main">Table 1: </span>Specifications for relevant common data types.</caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Requirement">Requirement</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Levels&lt;span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;&gt;&lt;sup&gt;a&lt;/sup&gt;&lt;/span&gt;">Levels<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>a</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Format">Format</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Notes">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="DNA">DNA</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">whole genome sequencing</th>
+<td headers="DNA stub_1_1 Requirement" class="gt_row gt_left">required</td>
+<td headers="DNA stub_1_1 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="DNA stub_1_1 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="DNA stub_1_1 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">whole exome sequencing</th>
+<td headers="DNA stub_1_2 Requirement" class="gt_row gt_left">required</td>
+<td headers="DNA stub_1_2 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="DNA stub_1_2 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="DNA stub_1_2 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_3" scope="row" class="gt_row gt_left gt_stub">SNP microarray</th>
+<td headers="DNA stub_1_3 Requirement" class="gt_row gt_left">required</td>
+<td headers="DNA stub_1_3 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> AND processed</p>
+</div></td>
+<td headers="DNA stub_1_3 Format" class="gt_row gt_left">raw: CEL, IDAT, tsv (raw values per SNP) &amp; processed: tsv (genotypes per SNP)</td>
+<td headers="DNA stub_1_3 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_4" scope="row" class="gt_row gt_left gt_stub">immunosequencing</th>
+<td headers="DNA stub_1_4 Requirement" class="gt_row gt_left">required</td>
+<td headers="DNA stub_1_4 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="DNA stub_1_4 Format" class="gt_row gt_left">vendor-dependent, e.g. ImmunoSEQ and 10XGenomics formats</td>
+<td headers="DNA stub_1_4 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">Sanger sequencing</th>
+<td headers="DNA stub_1_5 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="DNA stub_1_5 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="DNA stub_1_5 Format" class="gt_row gt_left"></td>
+<td headers="DNA stub_1_5 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="RNA expression">RNA expression</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_6" scope="row" class="gt_row gt_left gt_stub">RNA sequencing (bulk or single-cell)</th>
+<td headers="RNA expression stub_1_6 Requirement" class="gt_row gt_left">required</td>
+<td headers="RNA expression stub_1_6 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="RNA expression stub_1_6 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="RNA expression stub_1_6 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_7" scope="row" class="gt_row gt_left gt_stub">gene expression microarray</th>
+<td headers="RNA expression stub_1_7 Requirement" class="gt_row gt_left">required</td>
+<td headers="RNA expression stub_1_7 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> AND processed</p>
+</div></td>
+<td headers="RNA expression stub_1_7 Format" class="gt_row gt_left">raw: CEL, IDAT, tsv (raw values per SNP, copy number, and loss of heterozygosity) &amp; processed: tsv (normalized values and purity/ploidy)</td>
+<td headers="RNA expression stub_1_7 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_8" scope="row" class="gt_row gt_left gt_stub">qPCR</th>
+<td headers="RNA expression stub_1_8 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="RNA expression stub_1_8 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="RNA expression stub_1_8 Format" class="gt_row gt_left">csv/tsv (according to template)</td>
+<td headers="RNA expression stub_1_8 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="methylation">methylation</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_9" scope="row" class="gt_row gt_left gt_stub">ATAC sequencing</th>
+<td headers="methylation stub_1_9 Requirement" class="gt_row gt_left">required</td>
+<td headers="methylation stub_1_9 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="methylation stub_1_9 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="methylation stub_1_9 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_10" scope="row" class="gt_row gt_left gt_stub">methylation array</th>
+<td headers="methylation stub_1_10 Requirement" class="gt_row gt_left">required</td>
+<td headers="methylation stub_1_10 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="methylation stub_1_10 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="methylation stub_1_10 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_11" scope="row" class="gt_row gt_left gt_stub">bisulfite sequencing</th>
+<td headers="methylation stub_1_11 Requirement" class="gt_row gt_left">required</td>
+<td headers="methylation stub_1_11 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR semi-processed</p>
+</div></td>
+<td headers="methylation stub_1_11 Format" class="gt_row gt_left">raw: FASTQ, unaligned BAM, CRAM | semi-processed: aligned BAM</td>
+<td headers="methylation stub_1_11 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="protein">protein</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_12" scope="row" class="gt_row gt_left gt_stub">LC-MS</th>
+<td headers="protein stub_1_12 Requirement" class="gt_row gt_left">required</td>
+<td headers="protein stub_1_12 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> AND processed</p>
+</div></td>
+<td headers="protein stub_1_12 Format" class="gt_row gt_left">raw: mzML &amp; processed: protein intensities (csv/tsv)</td>
+<td headers="protein stub_1_12 PublicNotes" class="gt_row gt_left">https://www.psidev.info/mzML</td></tr>
+    <tr><th id="stub_1_13" scope="row" class="gt_row gt_left gt_stub">western blot</th>
+<td headers="protein stub_1_13 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="protein stub_1_13 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="protein stub_1_13 Format" class="gt_row gt_left">densitometry output (csv/tsv)</td>
+<td headers="protein stub_1_13 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_14" scope="row" class="gt_row gt_left gt_stub">plate-based ELISA</th>
+<td headers="protein stub_1_14 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="protein stub_1_14 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="protein stub_1_14 Format" class="gt_row gt_left">plate reader output (csv/tsv)</td>
+<td headers="protein stub_1_14 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_15" scope="row" class="gt_row gt_left gt_stub">protein/peptide microarrays</th>
+<td headers="protein stub_1_15 Requirement" class="gt_row gt_left">required</td>
+<td headers="protein stub_1_15 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="protein stub_1_15 Format" class="gt_row gt_left">label-free quantification matrix (csv/tsv)</td>
+<td headers="protein stub_1_15 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="metabolomics">metabolomics</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_16" scope="row" class="gt_row gt_left gt_stub">LC-MS</th>
+<td headers="metabolomics stub_1_16 Requirement" class="gt_row gt_left">required</td>
+<td headers="metabolomics stub_1_16 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> AND processed</p>
+</div></td>
+<td headers="metabolomics stub_1_16 Format" class="gt_row gt_left">raw: mzML or vendor-dependent format &amp; processed: metabolite intensities (csv/tsv)</td>
+<td headers="metabolomics stub_1_16 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="clinical">clinical</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_17" scope="row" class="gt_row gt_left gt_stub">structured clinical data</th>
+<td headers="clinical stub_1_17 Requirement" class="gt_row gt_left">required</td>
+<td headers="clinical stub_1_17 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="clinical stub_1_17 Format" class="gt_row gt_left">csv/tsv or XML with metadata for each variable</td>
+<td headers="clinical stub_1_17 PublicNotes" class="gt_row gt_left">key primary and secondary endpoints only</td></tr>
+    <tr><th id="stub_1_18" scope="row" class="gt_row gt_left gt_stub">EEG</th>
+<td headers="clinical stub_1_18 Requirement" class="gt_row gt_left">required</td>
+<td headers="clinical stub_1_18 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="clinical stub_1_18 Format" class="gt_row gt_left"></td>
+<td headers="clinical stub_1_18 PublicNotes" class="gt_row gt_left">pending additional comments</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="clinical/imaging">clinical/imaging</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_19" scope="row" class="gt_row gt_left gt_stub">MRI or other radiological image</th>
+<td headers="clinical/imaging stub_1_19 Requirement" class="gt_row gt_left">required</td>
+<td headers="clinical/imaging stub_1_19 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="clinical/imaging stub_1_19 Format" class="gt_row gt_left">dicom, nifti, minc</td>
+<td headers="clinical/imaging stub_1_19 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="imaging">imaging</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_20" scope="row" class="gt_row gt_left gt_stub">immunohistochemistry</th>
+<td headers="imaging stub_1_20 Requirement" class="gt_row gt_left">required</td>
+<td headers="imaging stub_1_20 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="imaging stub_1_20 Format" class="gt_row gt_left">a bio-formats compatible file format</td>
+<td headers="imaging stub_1_20 PublicNotes" class="gt_row gt_left">https://www.tinyurl.com/bio-formats</td></tr>
+    <tr><th id="stub_1_21" scope="row" class="gt_row gt_left gt_stub">immunofluorescence</th>
+<td headers="imaging stub_1_21 Requirement" class="gt_row gt_left">required</td>
+<td headers="imaging stub_1_21 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="imaging stub_1_21 Format" class="gt_row gt_left">a bio-formats compatible file format</td>
+<td headers="imaging stub_1_21 PublicNotes" class="gt_row gt_left">https://www.tinyurl.com/bio-formats</td></tr>
+    <tr><th id="stub_1_22" scope="row" class="gt_row gt_left gt_stub">gross morphology photos (mice)</th>
+<td headers="imaging stub_1_22 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="imaging stub_1_22 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="imaging stub_1_22 Format" class="gt_row gt_left">tiff, png, jpg or a bio-formats compatible file format</td>
+<td headers="imaging stub_1_22 PublicNotes" class="gt_row gt_left">https://www.tinyurl.com/bio-formats</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="in vitro drug screening">in vitro drug screening</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_23" scope="row" class="gt_row gt_left gt_stub">plate-based cell viability assay</th>
+<td headers="in vitro drug screening stub_1_23 Requirement" class="gt_row gt_left">required</td>
+<td headers="in vitro drug screening stub_1_23 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>processed</p>
+</div></td>
+<td headers="in vitro drug screening stub_1_23 Format" class="gt_row gt_left">csv/tsv (according to template)</td>
+<td headers="in vitro drug screening stub_1_23 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="other">other</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_24" scope="row" class="gt_row gt_left gt_stub">flow cytometry</th>
+<td headers="other stub_1_24 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="other stub_1_24 Levels" class="gt_row gt_left"><div class='gt_from_md'><p>raw</p>
+</div></td>
+<td headers="other stub_1_24 Format" class="gt_row gt_left">fsc with gating parameters</td>
+<td headers="other stub_1_24 PublicNotes" class="gt_row gt_left"></td></tr>
+    <tr><th id="stub_1_25" scope="row" class="gt_row gt_left gt_stub">in vivo tumor growth experiments</th>
+<td headers="other stub_1_25 Requirement" class="gt_row gt_left" style="color: #BEBEBE; font-style: italic;">optional</td>
+<td headers="other stub_1_25 Levels" class="gt_row gt_left"><div class='gt_from_md'><p><strong>raw</strong> OR processed</p>
+</div></td>
+<td headers="other stub_1_25 Format" class="gt_row gt_left">csv/tsv (according to template) where raw: tumor dimensions or other raw measurements &amp; processed: calculated tumor volume/size</td>
+<td headers="other stub_1_25 PublicNotes" class="gt_row gt_left"></td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>a</sup></span> Level nomenclature can be cross-referenced with https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/data-levels, where 'raw' corresponses to Level 1 and 'semi-processed' most closely corresponds to Level 2.</td>
+    </tr>
+  </tfoot>
+</table>
