@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 import { basePath } from "./src/lib/base-path";
 
-// Deployed to GitHub Pages at https://nf-osi.github.io/news/.
-// TODO: drop basePath (and the CNAME-based custom domain setup) once this
-// site moves to a custom domain.
+// Deployed to GitHub Pages at https://news.nf.synapse.org/, served from the
+// domain root (see src/lib/base-path.ts).
 const nextConfig: NextConfig = {
   output: "export",
   basePath,

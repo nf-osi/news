@@ -34,7 +34,7 @@ See "Adding a new post" and "Adding a new research brief" below for each.
    `authors` is a list — add another entry for a co-authored post.
 
 3. Put the cover image at `public/assets/blog/my-new-post/cover.png` (create the directory). Reuse `/assets/blog/authors/nf-osi.svg` for the author picture unless the author has their own.
-4. Run `npm run dev` and check `http://localhost:3000/news` before committing.
+4. Run `npm run dev` and check `http://localhost:3000` before committing.
 
 Posts are sorted by `date` descending; the most recent post becomes the homepage hero.
 
