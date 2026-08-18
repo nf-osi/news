@@ -72,6 +72,16 @@ Conventions:
 - Tags are title case (`Funding`, not `funding`), except acronyms (`NF1`, `NF News`).
 - Reuse an existing category/tag if one already fits; introduce a new one if the post genuinely doesn't fit the current set.
 
+> [!IMPORTANT]
+> `Featured` is an important tag that drives the "featured" RSS feed at `/tags/featured/feed.xml`; the [NF Data Portal](https://nf.synapse.org/) homepage pulls from directly to show its news cards. Whatever is tagged `Featured` here is what visitors see there, so keep it current; add the tag to new posts worth surfacing and remove it from old ones.
+
+## RSS feeds
+
+- `/feed.xml` — every post and research brief, newest first.
+- `/tags/<slug>/feed.xml` — same, filtered to one tag (e.g. `/tags/featured/feed.xml`).
+
+Both are generated at build time by `src/lib/rss.ts` from `getAllFeedItems()`/`getFeedItemsByTag()`.
+
 ## Adding a new research brief
 
 Research briefs are a separate content type from blog posts — multi-author scientific documents (specs, RFC summaries, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, independent of the blog pipeline (`_posts/`, `Post`, categories) except for `tags`, which are shared with blog posts through the same `/tags/<slug>` pages.
@@ -127,12 +137,13 @@ npm run start    # serve the production build
 
 - `_posts/` — one Markdown file per blog post, with YAML front matter.
 - `_briefs/` — one folder per research brief; each folder contains `brief.md` plus any sibling `.html` include files (see "Adding a new research brief").
-- `src/app/` — Next.js App Router pages: `/`, `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]` (blog), and `/briefs`, `/briefs/[slug]` (research briefs).
+- `src/app/` — Next.js App Router pages: `/`, `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]` (blog), `/briefs`, `/briefs/[slug]` (research briefs), and `/feed.xml`, `/tags/[slug]/feed.xml` (RSS, see "RSS feeds" above).
 - `src/app/_components/` — page components (post previews, headers, taxonomy pills, etc); brief-specific components live in `src/app/_components/briefs/`.
 - `src/lib/api.ts` — reads `_posts/`, exposes `getAllPosts`, `getPostsByCategory`, `getPostsByTag`, etc.
 - `src/lib/briefs.ts` — reads `_briefs/`, exposes `getAllBriefs`, `getBriefBySlug`.
 - `src/lib/markdownToHtml.ts` — converts a blog post's Markdown body to HTML via `remark`.
 - `src/lib/briefMarkdownToHtml.ts` — same, but also splices in raw HTML from `<!-- include: ... -->` file references.
+- `src/lib/rss.ts` — builds the RSS 2.0 XML served by `/feed.xml` and `/tags/[slug]/feed.xml`.
 - `src/interfaces/` — `Post`/`Author` (blog) and `ResearchBrief`/`BriefAuthor` (briefs) types.
 - `public/assets/blog/` — cover images (one subdirectory per post slug) and author pictures.
 - `public/assets/briefs/` — figure/image assets for research briefs, one subdirectory per brief slug.
