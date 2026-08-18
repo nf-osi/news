@@ -1,4 +1,5 @@
 import { FeedItem } from "@/interfaces/feed-item";
+import { getAllTags, getFeedItemsByTag } from "@/lib/api";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/constants";
 
 function escapeXml(value: string) {
@@ -89,4 +90,16 @@ export function buildRssFeed(
   </channel>
 </rss>
 `;
+}
+
+// Shared by the `/tags/<slug>/feed.xml` and `/tag/<slug>/` (WordPress-style
+// `?feed=rss2`) routes, which serve the same tag feed at different paths.
+export function buildTagRssFeed(slug: string, feedPath: string): string | null {
+  const tag = getAllTags().find((t) => t.slug === slug);
+  if (!tag) return null;
+
+  return buildRssFeed(getFeedItemsByTag(slug), {
+    feedPath,
+    title: `${tag.name} | ${SITE_NAME}`,
+  });
 }
