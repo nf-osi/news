@@ -1,5 +1,6 @@
 ---
-title: "Building and evaluating a graph-RAG assistant for a rare disease data portal"
+title: "Faster search, deeper answers: modernizing discovery on the NF Data Portal"
+# alt title: "Find more, ask anything: search and discovery improvements on the NF Data Portal"
 status: "Draft"
 version: "0.1.0"
 date: "2026-08-17T00:00:00.000Z"
@@ -9,17 +10,38 @@ authors:
     affiliation: Sage Bionetworks
     affiliationUrl: "https://sagebionetworks.org/"
     orcid: "0000-0003-1488-6730"
-excerpt: "The NF Data Portal is rolling out two search and discovery improvements: a switch to OpenSearch and the addition of a graph-RAG Portal Assistant. This brief covers the Portal Assistant — how it's built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
+excerpt: "The NF Data Portal is rolling out two search and discovery improvements: a switch to OpenSearch and the addition of a graph-RAG Portal Assistant. This brief covers both and goes more in-depth into how the Portal Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
 tags:
   - "AI"
   - "New Features"
 ---
 
-A researcher planning an experiment on plexiform neurofibromas comes to the NF Data Portal with a question that sounds simple: *I need isogenic cell line pairs that differ only in NF1 status.* The portal has the answer. It has cell lines, donors, genotypes, and the provenance that links them. What it does not have is a way to ask.
+There are different types of questions a researcher can bring to the NF Data Portal. Some are known-item lookups: find this cell line, filter to this mutation, get to the right page quickly. The search box already handles those, and handling them faster was worth doing on its own. Others aren't simple lookups at all — they require synthesis across several sources, or a relationship that doesn't live inside any single field. A researcher planning an experiment on plexiform neurofibromas might come to the portal with a question that sounds simple: *I need isogenic cell line pairs that differ only in NF1 status.* The portal has the answer. It has cell lines, donors, genotypes, and the provenance that links them. What it does not have, for a question like this, is a way to ask.
 
 The search box matches text. The facet filters match values that someone thought to make into a facet. Neither can express "pairs," "differ only in," or "same donor" — those are relationships, and relationships live between records rather than inside them. When we assembled a benchmark of 35 questions that NF researchers are likely to ask, only 9 were fully answerable through the portal's facet filters and 13 through its text search. Twenty-three could not be answered by facets at all.
 
-This post describes what we built to close that gap — a knowledge graph the portal assistant queries directly, in SPARQL, as an agent — and, more importantly, how we measure whether it works. The building was the easy part. Knowing whether an agentic retrieval system is trustworthy enough to put in front of scientists turned out to be the harder and more interesting problem.
+Last quarter we added two major portal upgrades, one for each type of question: a migration of the portal's search backend to OpenSearch, and the addition of an AI Portal Assistant. They are not the same upgrade wearing two hats, and the rest of this brief is organized around that division — first OpenSearch, briefly, then the assistant, at length, because the two are not owed equal space.
+
+## OpenSearch and the Portal Assistant solve different classes of questions
+
+The search box should stay fast, cheap, and familiar. The assistant should step in when the user needs synthesis across multiple sources, deeper retrieval from sources like publications, or a guided next action.
+
+### OpenSearch: fast discovery over what's already indexed
+
+We migrated the portal's search backend from MySQL full-text search to [OpenSearch](https://opensearch.org/), an open-source search and analytics engine, to be the first pass for the traffic that doesn't need an agent: known-item lookups, metadata filtering, and "get me to the right page, quickly" interactions. What it gets us is deliberately modest:
+
+- Fast response times for common lookups and filtering.
+- Autosuggest that reflects the portal's actual vocabulary and phrasing, not a generic dictionary.
+- Some semantic flexibility through synonym and ranking configuration — enough to catch near-miss phrasing without putting a model in the loop.
+- A cheaper, simpler operational path for the bulk of everyday search traffic, which is still most of what the portal serves.
+
+Its best fit is known-item search, simple metadata lookups, and faceted browsing — the questions that were already answerable before this migration, just faster and with better autosuggest now. It does not, and was never meant to, answer the isogenic-pairs question above.
+
+### The Portal Assistant: for questions that have to be assembled
+
+The assistant is for the other 23 of 35. It can pull from multiple knowledge bases at once — including a knowledge graph and publication content that OpenSearch doesn't index — compare and synthesize across them, retrieve more deeply than a surface-level metadata match, and suggest a next action instead of just a result. Its best fit is cross-source synthesis, comparisons, explanation-heavy workflows, exploratory analysis, and guided task completion.
+
+We are spending most of this brief on the assistant, and that imbalance is deliberate. A ranked list of search results is cheap to sanity-check: a user can glance at the top few hits and tell in seconds whether OpenSearch pointed them somewhere reasonable. An assembled, synthesized answer doesn't offer that same fast gut-check, and a wrong answer that *reads* as authoritative is more dangerous than an obviously mediocre list — it's the kind of error that survives a quick look. That asymmetry in how easily a wrong answer gets caught is why the assistant carries a heavier evaluation burden before we're willing to call it trustworthy enough for researchers to rely on, and why most of what follows is about measuring that trust rather than describing the build.
 
 ## A graph instead of an index
 
