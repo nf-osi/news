@@ -8,7 +8,6 @@ authors:
     picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
-  - "Featured"
   - "Researcher Spotlight"
 ogImage:
   url: "/assets/blog/researcher-spotlight-sara-gosline/cover.png"

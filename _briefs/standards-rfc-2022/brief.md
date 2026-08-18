@@ -4,6 +4,7 @@ status: "Current standard"
 version: "1.1.0"
 date: "2022-09-02T00:00:00.000Z"
 tags:
+  - "Featured"
   - "Data Standards"
 authors:
   - name: Robert Allaway

@@ -8,7 +8,6 @@ authors:
     picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
-  - "Featured"
   - "Hack for NF 2020"
   - "Hackathon"
   - "NF News"

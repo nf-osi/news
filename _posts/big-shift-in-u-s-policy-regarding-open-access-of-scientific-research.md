@@ -8,6 +8,7 @@ authors:
     picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
+  - "Featured"
   - "Data Sharing"
   - "NF News"
   - "Open Access"
