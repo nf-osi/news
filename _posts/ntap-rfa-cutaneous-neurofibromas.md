@@ -8,7 +8,6 @@ authors:
     picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
-  - "Featured"
   - "Funding"
 ogImage:
   url: "/assets/blog/ntap-rfa-cutaneous-neurofibromas/cover.png"

@@ -8,7 +8,6 @@ authors:
     picture: "/assets/blog/authors/nf-osi.svg"
 category: "Blog Post"
 tags:
-  - "Featured"
   - "Francis S Collins Scholars"
   - "Funding"
   - "NF News"
