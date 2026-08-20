@@ -9,7 +9,7 @@ type Props = {
 export function BriefByline({ authors, communityContributors }: Props) {
   return (
     <div className="text-lg mb-6">
-      <h2 className="text-sm font-bold uppercase tracking-wide text-accent-7 dark:text-slate-400 mb-2">
+      <h2 className="data-label mb-2">
         Authors
       </h2>
       <ul className="flex flex-wrap gap-x-6 gap-y-2 mb-4">
@@ -55,7 +55,7 @@ export function BriefByline({ authors, communityContributors }: Props) {
       </ul>
       {communityContributors && communityContributors.length > 0 && (
         <>
-          <h2 className="text-sm font-bold uppercase tracking-wide text-accent-7 dark:text-slate-400 mb-2">
+          <h2 className="data-label mb-2">
             Community Contributors
           </h2>
           <p>{communityContributors.join(", ")}</p>

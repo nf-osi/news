@@ -24,21 +24,16 @@ export function PostHeader({
 }: Props) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Authors authors={authors} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
+      <div className="mx-auto max-w-2xl">
+        <PostTaxonomy category={category} tags={tags} />
+        <PostTitle>{title}</PostTitle>
+        <div className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-lg text-ink-300 dark:text-slate-400">
           <Authors authors={authors} />
-        </div>
-        <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>
-        <PostTaxonomy category={category} tags={tags} />
+      </div>
+      <div className="mb-10 md:mb-16">
+        <CoverImage title={title} src={coverImage} />
       </div>
     </>
   );

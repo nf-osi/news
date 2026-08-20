@@ -3,7 +3,7 @@
 A statically generated site for the [NF Open Science Initiative](https://nf.synapse.org/), built with Next.js (App Router), TypeScript, and Tailwind CSS. All content is Markdown files with front matter. There are two independent content types:
 
 - **Blog posts** (`_posts/`, routes under `/posts`, `/categories`, `/tags`) — news, announcements, researcher spotlights.
-- **Research briefs** (`_briefs/`, routes under `/briefs`) — multi-author scientific documents like specs and RFC summaries, with their own metadata shape (status/version, author affiliations/ORCID, community contributors).
+- **Research briefs** (`_briefs/`, routes under `/briefs`) — multi-author documents like specs and reports that contain can table and figures, with their own metadata shape (status/version, author affiliations/ORCID, community contributors).
 
 See "Adding a new post" and "Adding a new research brief" below for each.
 
@@ -84,7 +84,7 @@ Both are generated at build time by `src/lib/rss.ts` from `getAllFeedItems()`/`g
 
 ## Adding a new research brief
 
-Research briefs are a separate content type from blog posts — multi-author scientific documents (specs, RFC summaries, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, independent of the blog pipeline (`_posts/`, `Post`, categories) except for `tags`, which are shared with blog posts through the same `/tags/<slug>` pages.
+Briefs are a separate content type from blog posts — multi-author scientific documents (specs, reports, etc.) with their own metadata shape: `status`/`version`, an array of authors with affiliation/ORCID links, and an optional plain-name "Community Contributors" list. They live at `/briefs` and `/briefs/<slug>`, independent of the blog pipeline (`_posts/`, `Post`, categories) except for `tags`, which are shared with blog posts through the same `/tags/<slug>` pages.
 
 1. Create `_briefs/<slug>/brief.md` with front matter:
 
@@ -105,12 +105,24 @@ Research briefs are a separate content type from blog posts — multi-author sci
    excerpt: "A short summary for the /briefs index."
    tags:
      - "Data Standards"
+   license:
+     name: "CC BY 4.0"
+     url: "https://creativecommons.org/licenses/by/4.0/"
+   assets:
+     - name: "Survey responses"
+       url: "https://www.synapse.org/#!Synapse:syn00000000"
+       type: data
+     - name: "Analysis code"
+       url: "https://github.com/nf-osi/example"
+       type: code
    ---
 
    Body content goes here, in Markdown.
    ```
 
-   `url`, `affiliation`, `affiliationUrl`, `orcid`, `communityContributors`, and `tags` are all optional. `tags` uses the same tag list as blog posts (see "Categories and tags" above).
+   Only `title` and `date` are required. `status`, `version`, `license`, and `assets` fill the metadata rail beside the byline; `url`, `affiliation`, `affiliationUrl`, and `orcid` refine an author; `communityContributors`, `excerpt`, and `tags` are optional too. `tags` uses the same tag list as blog posts (see "Categories and tags" above).
+
+   Each asset takes an optional `type` — `data`, `code`, `document`, or `link` (the default) — which picks its icon. Every rail field renders only when the brief supplies it, so omitting a key leaves no empty row or heading behind.
 
 2. **Raw HTML (tables, figures)**: `remark-html`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to `brief.md` (e.g. `_briefs/<slug>/table.html`, `_briefs/<slug>/fig1.html`) and reference it from the Markdown body with an include marker on its own line:
 
@@ -123,6 +135,19 @@ Research briefs are a separate content type from blog posts — multi-author sci
 3. Run `npm run dev` and check `http://localhost:3000/briefs/<slug>` before committing.
 
 Briefs are sorted by `date` descending on the `/briefs` index. See `_briefs/standards-rfc-2022/brief.md` (with `table.html` and `fig1.html`–`fig4.html`) for a full worked example, migrated from [nf-osi.github.io/research/rfc-brief.html](https://nf-osi.github.io/research/rfc-brief.html).
+
+## Design system
+
+The site borrows the NF Data Portal's design system for branding alignment. The source of truth is [`Sage-Bionetworks/synapse-web-monorepo`](https://github.com/Sage-Bionetworks/synapse-web-monorepo):
+
+| | Portal source | Here |
+| --- | --- | --- |
+| Colors | `nfPortalPalette` in `packages/synapse-react-client/src/theme/palette/Palettes.ts` — primary `#125e81`, secondary `#404b63` | `src/lib/brand.ts`, exposed to Tailwind as the `brand` / `ink` scales |
+| Type | `defaultFontFamily` (DM Sans) in `packages/synapse-react-client/src/theme/typography/Typography.ts` | `next/font/google` in `src/app/layout.tsx`, wired to Tailwind's `font-sans` |
+| Header / footer | `apps/synapse-portal-framework/src/components/{navbar/Navbar,Footer}.tsx` + `apps/portals/nf/src/config/` | `src/app/_components/{header,footer}.tsx` |
+| Logo, hero artwork | `apps/portals/nf/public/logo.svg`, `apps/portals/nf/src/config/style/{nfLogoWhite,molecule-back}.svg` | `public/brand/` |
+
+When adding UI, reach for the `brand`/`ink` scales and the `.eyebrow` / `.nav-link` / `.tag-chip` component classes in `src/app/globals.css` before introducing a new color or one-off style. If design changes upstream, update `src/lib/brand.ts` and the copies in `public/brand/`.
 
 ## Development
 
@@ -145,8 +170,10 @@ npm run start    # serve the production build
 - `src/lib/briefMarkdownToHtml.ts` — same, but also splices in raw HTML from `<!-- include: ... -->` file references.
 - `src/lib/rss.ts` — builds the RSS 2.0 XML served by `/feed.xml` and `/tags/[slug]/feed.xml`.
 - `src/interfaces/` — `Post`/`Author` (blog) and `ResearchBrief`/`BriefAuthor` (briefs) types.
+- `src/lib/brand.ts` — the color scales, shared by `tailwind.config.ts` and by code that needs a raw hex (see "Design system" above).
 - `public/assets/blog/` — cover images (one subdirectory per post slug) and author pictures.
 - `public/assets/briefs/` — figure/image assets for research briefs, one subdirectory per brief slug.
+- `public/brand/` — the NF wordmark (light and dark) and the hero molecule artwork, copied from the portal.
 
 ## WordPress migration
 

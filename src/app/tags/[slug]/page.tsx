@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
+import { PageHeading } from "@/app/_components/page-heading";
 import { MoreItems } from "@/app/_components/more-items";
 import { getAllTags, getFeedItemsByTag } from "@/lib/api";
 import { SITE_NAME } from "@/lib/constants";
@@ -29,11 +29,10 @@ export default async function TagPage(props: Params) {
   return (
     <main>
       <Container>
-        <Header />
-        <h1 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight capitalize">
-          {tagName}
-        </h1>
-        <MoreItems items={feedItems} />
+        <PageHeading eyebrow="Tag">
+          <span className="capitalize">{tagName}</span>
+        </PageHeading>
+        <MoreItems items={feedItems} title={null} />
       </Container>
     </main>
   );

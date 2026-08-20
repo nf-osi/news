@@ -4,15 +4,20 @@ import { BriefPreview } from "./briefs/brief-preview";
 
 type Props = {
   items: FeedItem[];
+  /** Section heading above the grid; pass null on pages that already have an
+   *  <h1> describing the list (tag and category archives). */
+  title?: string | null;
 };
 
-export function MoreItems({ items }: Props) {
+export function MoreItems({ items, title = "More Stories" }: Props) {
   return (
     <section>
-      <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        More Stories
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+      {title && (
+        <h2 className="mb-10 border-t border-brand-50 pt-10 text-3xl font-bold leading-tight tracking-tight dark:border-ink-700 md:text-4xl">
+          {title}
+        </h2>
+      )}
+      <div className="mb-32 grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-20">
         {items.map((feedItem) =>
           feedItem.type === "post" ? (
             <PostPreview
