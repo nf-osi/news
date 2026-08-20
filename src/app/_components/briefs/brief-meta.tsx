@@ -1,14 +1,41 @@
+import DateFormatter from "@/app/_components/date-formatter";
+
 type Props = {
-  status: string;
-  version: string;
+  date: string;
+  /** Optional frontmatter — a brief may carry neither. */
+  status?: string;
+  version?: string;
+  className?: string;
 };
 
-export function BriefMeta({ status, version }: Props) {
+/**
+ * A brief's document metadata as label/value rows, in the same idiom the
+ * portal's study cards use for theirs. Shared by the brief masthead and the
+ * homepage's featured brief card.
+ */
+export function BriefMeta({ date, status, version, className }: Props) {
   return (
-    <p className="text-lg text-accent-7 dark:text-slate-400">
-      Status: <strong>{status}</strong>
-      <br />
-      Version: <strong>{version}</strong>
-    </p>
+    <dl className={className}>
+      <Field label="Published">
+        <DateFormatter dateString={date} />
+      </Field>
+      {status && <Field label="Status">{status}</Field>}
+      {version && <Field label="Version">{version}</Field>}
+    </dl>
+  );
+}
+
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex gap-4 py-1">
+      <dt className="data-label w-28 shrink-0 pt-0.5">{label}</dt>
+      <dd>{children}</dd>
+    </div>
   );
 }

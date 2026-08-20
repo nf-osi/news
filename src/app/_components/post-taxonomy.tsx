@@ -11,7 +11,7 @@ export function PostTaxonomy({ category, tags = [] }: Props) {
     <div className="flex flex-wrap items-center gap-2 mb-4">
       <Link
         href={`/categories/${slugify(category)}`}
-        className="text-sm font-bold uppercase tracking-wide text-success hover:underline"
+        className="eyebrow hover:underline"
       >
         {category}
       </Link>
@@ -19,7 +19,7 @@ export function PostTaxonomy({ category, tags = [] }: Props) {
         <Link
           key={tag}
           href={`/tags/${slugify(tag)}`}
-          className="text-sm text-accent-7 dark:text-slate-400 bg-accent-1 dark:bg-slate-800 rounded-full px-3 py-1 hover:underline"
+          className="tag-chip"
         >
           {tag}
         </Link>

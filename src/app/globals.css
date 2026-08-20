@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-ink-900 antialiased dark:bg-ink-900 dark:text-slate-300;
+  }
+
+  /* Portal headings are DM Sans bold with tight-but-not-crushed tracking. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink-900 dark:text-white;
+  }
+
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+
+  /* The briefs table of contents and in-page anchors land under the sticky
+     site header without this. */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  /* Uppercase eyebrow above a headline — the portal's `sectionTitle`. */
+  .eyebrow {
+    @apply text-sm font-bold uppercase tracking-wide text-brand-500 dark:text-brand-200;
+  }
+
+  .nav-link {
+    @apply inline-flex items-center rounded-md px-3 py-2 text-base font-medium text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-white;
+  }
+
+  /* The theme toggle's icon is chosen by `data-mode` on <html> (set by the
+     FOUC script before first paint) so the button's markup is identical on the
+     server and the client. Default to the system icon for the brief moment
+     before the script runs, and if JS is off. */
+  .theme-icon {
+    display: none;
+  }
+
+  .theme-icon-system,
+  [data-mode="system"] .theme-icon-system {
+    display: block;
+  }
+
+  [data-mode="dark"] .theme-icon-system,
+  [data-mode="light"] .theme-icon-system {
+    display: none;
+  }
+
+  [data-mode="dark"] .theme-icon-dark,
+  [data-mode="light"] .theme-icon-light {
+    display: block;
+  }
+
+  /* Metadata key in a card's footer strip — the portal's `dataFieldKey`. */
+  .data-label {
+    /* ink-300 rather than a lighter grey: at 14px these need to clear the
+       4.5:1 contrast minimum. */
+    @apply text-sm uppercase tracking-wide text-ink-300 dark:text-slate-400;
+  }
+
+  .tag-chip {
+    @apply rounded-full bg-brand-50 px-3 py-1 text-sm text-brand-700 transition-colors hover:bg-brand-100 dark:bg-ink-700 dark:text-brand-100 dark:hover:bg-ink-600;
+  }
+}

@@ -1,19 +1,31 @@
+import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/constants";
+import { BRAND_PRIMARY } from "@/lib/brand";
 import { withBasePath } from "@/lib/base-path";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
+import type { Metadata, Viewport } from "next";
+import { DM_Sans } from "next/font/google";
+import { ThemeScript } from "./_components/theme-switcher";
 
 import "./globals.css";
+import "./prose.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// The NF Data Portal's `defaultFontFamily`
+// (packages/synapse-react-client/src/theme/typography/Typography.ts).
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_NAME,
   description: SITE_TAGLINE,
+};
+
+export const viewport: Viewport = {
+  themeColor: BRAND_PRIMARY,
 };
 
 export default function RootLayout({
@@ -22,8 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -48,28 +61,25 @@ export default function RootLayout({
         <link
           rel="mask-icon"
           href={withBasePath("/favicon/safari-pinned-tab.svg")}
-          color="#1c3f57"
+          color={BRAND_PRIMARY}
         />
         <link
           rel="shortcut icon"
           href={withBasePath("/favicon/favicon.ico")}
         />
-        <meta name="msapplication-TileColor" content="#1c3f57" />
+        <meta name="msapplication-TileColor" content={BRAND_PRIMARY} />
         <meta
           name="msapplication-config"
           content={withBasePath("/favicon/browserconfig.xml")}
         />
-        <meta name="theme-color" content="#1c3f57" />
         <link
           rel="alternate"
           type="application/rss+xml"
           href={withBasePath("/feed.xml")}
         />
       </head>
-      <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
-      >
-        <ThemeSwitcher />
+      <body className="font-sans">
+        <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>

@@ -5,15 +5,12 @@ import { SITE_NAME } from "@/lib/constants";
 import briefMarkdownToHtml from "@/lib/briefMarkdownToHtml";
 import { addHeadingIds, extractTableOfContents } from "@/lib/tableOfContents";
 import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
 import { PostTitle } from "@/app/_components/post-title";
 import { PostBody } from "@/app/_components/post-body";
-import { BriefMeta } from "@/app/_components/briefs/brief-meta";
+import { BriefRail } from "@/app/_components/briefs/brief-rail";
 import { BriefByline } from "@/app/_components/briefs/brief-byline";
 import { BriefTags } from "@/app/_components/briefs/brief-tags";
 import { BriefToc } from "@/app/_components/briefs/brief-toc";
-import DateFormatter from "@/app/_components/date-formatter";
-import researchBriefStyles from "@/app/_components/research-brief-styles.module.css";
 
 export default async function Brief(props: Params) {
   const params = await props.params;
@@ -32,27 +29,30 @@ export default async function Brief(props: Params) {
   return (
     <main>
       <Container>
-        <Header />
-        <article className="mb-32">
-          <PostTitle>{brief.title}</PostTitle>
-          <div className="max-w-4xl mx-auto mb-12">
-            {brief.tags && brief.tags.length > 0 && (
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <BriefTags tags={brief.tags} />
-              </div>
-            )}
-            <BriefMeta status={brief.status} version={brief.version} />
-            <BriefByline
-              authors={brief.authors}
-              communityContributors={brief.communityContributors}
-            />
-            <div className="text-lg">
-              <DateFormatter dateString={brief.date} />
+        <article className="mx-auto max-w-7xl pb-32 pt-12 md:pt-16">
+          <header className="mb-12 border-b border-card-line pb-10 dark:border-ink-700">
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <span className="eyebrow">Research Brief</span>
+              <BriefTags tags={brief.tags} />
             </div>
-          </div>
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-[220px_1fr] gap-x-24">
+            <PostTitle>{brief.title}</PostTitle>
+            <div className="grid grid-cols-[minmax(0,1fr)] gap-x-12 lg:grid-cols-[minmax(0,1fr)_20rem]">
+              <BriefByline
+                authors={brief.authors}
+                communityContributors={brief.communityContributors}
+              />
+              <BriefRail
+                date={brief.date}
+                status={brief.status}
+                version={brief.version}
+                license={brief.license}
+                assets={brief.assets}
+              />
+            </div>
+          </header>
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-x-16 lg:grid-cols-[15rem_minmax(0,1fr)]">
             <BriefToc entries={tocEntries} />
-            <PostBody content={content} styles={researchBriefStyles} wide />
+            <PostBody content={content} variant="brief" />
           </div>
         </article>
       </Container>

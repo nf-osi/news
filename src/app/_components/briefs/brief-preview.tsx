@@ -32,17 +32,18 @@ export function BriefPreview({
         />
       </div>
       <div className="flex flex-wrap items-center gap-2 mb-4">
-        <span className="text-sm font-bold uppercase tracking-wide text-success inline-block">
-          Research Brief
-        </span>
+        <span className="eyebrow">Research Brief</span>
         <BriefTags tags={tags} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={`/briefs/${slug}`} className="hover:underline">
+      <h3 className="mb-3 text-2xl font-bold leading-snug tracking-tight">
+        <Link
+          href={`/briefs/${slug}`}
+          className="hover:text-brand-600 hover:underline dark:hover:text-brand-200"
+        >
           {title}
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div className="mb-4 text-lg text-ink-300 dark:text-slate-400">
         <DateFormatter dateString={date} />
       </div>
       {excerpt && <p className="text-lg leading-relaxed mb-4">{excerpt}</p>}

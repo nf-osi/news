@@ -1,0 +1,146 @@
+/* Rendered-Markdown styling for posts and research briefs.
+ *
+ * Deliberately NOT a CSS module: `darkMode: "class"` variants compile to
+ * `.dark <selector>`, and CSS Modules would scope that `.dark` to a hashed
+ * name that never matches the real one on <html>, silently killing every
+ * dark-mode rule. These selectors are specific enough not to need scoping.
+ *
+ * No `@layer components` wrapper either: Tailwind processes each CSS file on
+ * its own and the `@tailwind` directives live in globals.css, which imports
+ * ahead of this one in layout.tsx. */
+
+.article-body,
+.brief-body {
+  @apply text-lg leading-relaxed;
+}
+
+.article-body p,
+.article-body ul,
+.article-body ol,
+.article-body blockquote,
+.brief-body p,
+.brief-body ul,
+.brief-body ol,
+.brief-body blockquote {
+  @apply my-6;
+}
+
+.article-body h2,
+.brief-body h2 {
+  @apply mb-4 mt-12 text-3xl font-bold leading-snug tracking-tight;
+}
+
+.article-body h3,
+.brief-body h3 {
+  @apply mb-3 mt-8 text-xl font-bold leading-snug tracking-tight;
+}
+
+.article-body a,
+.brief-body a {
+  @apply text-brand-600 underline underline-offset-2 hover:text-brand-400 dark:text-brand-200 dark:hover:text-brand-100;
+}
+
+.article-body ul,
+.brief-body ul {
+  @apply list-disc pl-6;
+}
+
+.article-body ol,
+.brief-body ol {
+  @apply list-decimal pl-6;
+}
+
+.article-body blockquote,
+.brief-body blockquote {
+  @apply border-l-4 border-brand-100 pl-5 italic text-ink-500 dark:border-ink-600 dark:text-slate-400;
+}
+
+.article-body img.headshot {
+  @apply mb-4 h-32 w-32 rounded-full object-cover;
+}
+
+/* Briefs ---------------------------------------------------------------
+   A long technical document: prose is held to a reading measure while
+   tables and figures break out to the full column, the way a docs site
+   sets a technical article. */
+
+.brief-body > * {
+  max-width: 44rem;
+}
+
+.brief-body > figure,
+.brief-body > [data-table-scroll] {
+  max-width: 100%;
+}
+
+/* A hairline above each h2 turns the brief into clearly bounded sections
+   without needing a heavier type step. */
+.brief-body h2 {
+  @apply mt-16 border-t border-card-line pt-8 dark:border-ink-700;
+}
+
+.brief-body h2:first-child {
+  @apply mt-0 border-t-0 pt-0;
+}
+
+.brief-body h3 {
+  @apply mt-10;
+}
+
+/* Tables: horizontal rules only — a full grid of borders reads as noise at
+   this density. The scroll wrapper comes from briefMarkdownToHtml so a wide
+   table scrolls on its own instead of stretching the page. */
+
+.brief-body [data-table-scroll] {
+  @apply my-10 overflow-x-auto;
+}
+
+.brief-body table {
+  @apply w-full border-collapse text-base;
+  /* Below this the columns cram; the wrapper scrolls instead. */
+  min-width: 40rem;
+}
+
+.brief-body caption {
+  @apply mb-3 text-left text-sm leading-relaxed text-ink-300 dark:text-slate-400;
+}
+
+.brief-body caption span,
+.brief-body figcaption span {
+  @apply font-bold uppercase tracking-wide text-brand-600 dark:text-brand-200;
+}
+
+.brief-body thead th {
+  @apply whitespace-nowrap border-b-2 border-brand-500 px-3 pb-2 text-left align-bottom text-sm font-bold uppercase tracking-wide text-ink-500 dark:border-brand-200 dark:text-slate-300;
+}
+
+/* Row-group heading, e.g. the "DNA" / "RNA expression" bands. */
+.brief-body tbody th[colspan] {
+  @apply border-b border-card-line bg-brand-50 px-3 py-2 text-left text-sm font-bold uppercase tracking-wide text-brand-700 dark:border-ink-700 dark:bg-ink-800 dark:text-brand-100;
+}
+
+.brief-body tbody td,
+.brief-body tbody th {
+  @apply border-b border-card-line px-3 py-3 text-left align-top dark:border-ink-700;
+}
+
+/* Row label in the stub column. */
+.brief-body tbody th[scope="row"] {
+  @apply font-bold text-ink-900 dark:text-white;
+}
+
+.brief-body tbody p {
+  @apply my-0;
+}
+
+.brief-body figure {
+  @apply my-10;
+}
+
+.brief-body figure img {
+  @apply w-full border border-card-line dark:border-ink-700;
+}
+
+.brief-body figcaption {
+  @apply mt-3 text-sm leading-relaxed text-ink-300 dark:text-slate-400;
+}
