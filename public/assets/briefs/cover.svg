@@ -1,95 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="630" viewBox="0 0 1300 630">
+<!-- Generic cover for research briefs: it stands in for any brief, so it says
+     "a document with figures" in the abstract rather than depicting one —
+     a plotted figure panel under the NF mark's bubbles, on the portal's
+     primary gradient. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="630" viewBox="0 0 1300 630" role="img" aria-label="">
   <defs>
-    <linearGradient id="bg" x1="0" y1="630" x2="1300" y2="0">
-      <stop offset="0%" stop-color="#002637"/>
-      <stop offset="100%" stop-color="#125e81"/>
+    <linearGradient id="bg" x1="0" y1="630" x2="1300" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#002637"/>
+      <stop offset="1" stop-color="#125e81"/>
     </linearGradient>
-    <radialGradient id="glow" cx="750" cy="480" r="280">
-      <stop offset="0%" stop-color="#84bd41" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#84bd41" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="page-clip">
-      <rect x="80" y="90" width="620" height="450" rx="10"/>
-    </clipPath>
   </defs>
 
   <rect width="1300" height="630" fill="url(#bg)"/>
-  <circle fill="url(#glow)" cx="750" cy="480" r="280"/>
 
-  <!-- manuscript: title block, two-column body text, a section break, a references list -->
-  <!-- generic to any writeup (RNA-seq analysis, meta-review, spec) rather than one article's content -->
-  <g clip-path="url(#page-clip)">
-    <rect x="80" y="90" width="620" height="450" fill="#132c3d"/>
-    <rect x="80" y="90" width="620" height="58" fill="#25455c"/>
-    <rect x="112" y="112" width="260" height="14" rx="3" fill="#c9d7de"/>
-    <rect x="112" y="134" width="170" height="10" rx="2" fill="#7f9baf" opacity="0.8"/>
-
-    <g fill="#5e7d93">
-      <rect x="112" y="178" width="248" height="9" rx="2"/>
-      <rect x="386" y="178" width="230" height="9" rx="2"/>
-      <rect x="112" y="202" width="220" height="9" rx="2"/>
-      <rect x="386" y="202" width="258" height="9" rx="2"/>
-      <rect x="112" y="226" width="256" height="9" rx="2"/>
-      <rect x="386" y="226" width="200" height="9" rx="2"/>
-      <rect x="112" y="250" width="190" height="9" rx="2"/>
-      <rect x="386" y="250" width="240" height="9" rx="2"/>
-    </g>
-
-    <rect x="112" y="284" width="90" height="10" rx="2" fill="#84bd41"/>
-
-    <g fill="#5e7d93">
-      <rect x="112" y="310" width="240" height="9" rx="2"/>
-      <rect x="386" y="310" width="210" height="9" rx="2"/>
-      <rect x="112" y="334" width="210" height="9" rx="2"/>
-      <rect x="386" y="334" width="250" height="9" rx="2"/>
-      <rect x="112" y="358" width="250" height="9" rx="2"/>
-      <rect x="386" y="358" width="180" height="9" rx="2"/>
-    </g>
-
-    <line x1="112" y1="396" x2="668" y2="396" stroke="#3a5f78" stroke-width="1"/>
-    <g fill="#5e7d93" opacity="0.8">
-      <circle cx="118" cy="416" r="3"/>
-      <rect x="132" y="412" width="300" height="8" rx="2"/>
-      <circle cx="118" cy="438" r="3"/>
-      <rect x="132" y="434" width="260" height="8" rx="2"/>
-      <circle cx="118" cy="460" r="3"/>
-      <rect x="132" y="456" width="320" height="8" rx="2"/>
-    </g>
+  <!-- Figure panel: axes and a short series. -->
+  <rect x="110" y="130" width="640" height="390" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.22" stroke-width="3"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round">
+    <path d="M190 190v250h480"/>
   </g>
-  <rect x="80" y="90" width="620" height="450" rx="10" fill="none" stroke="#3a5f78" stroke-width="1.5"/>
-
-  <!-- figure panel: an abstract quantitative result (works for RNA-seq, meta-analysis, or any -->
-  <!-- effect-size figure) floating over the manuscript, standing in for whatever chart the piece has -->
-  <rect x="568" y="358" width="380" height="252" rx="10" fill="#08141d" opacity="0.6"/>
-  <rect x="560" y="350" width="380" height="252" rx="10" fill="#0d1c28" stroke="#84bd41" stroke-width="2"/>
-
-  <text x="584" y="380" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="2" fill="#84bd41">FIG. 1</text>
-
-  <g stroke="#3a5f78" stroke-width="1.5">
-    <line x1="610" y1="396" x2="610" y2="562"/>
-    <line x1="610" y1="562" x2="908" y2="562"/>
+  <g fill="#ffffff" fill-opacity="0.3">
+    <rect x="228" y="330" width="72" height="110"/>
+    <rect x="336" y="272" width="72" height="168"/>
+    <rect x="552" y="238" width="72" height="202"/>
   </g>
-  <line x1="762" y1="396" x2="762" y2="562" stroke="#3a5f78" stroke-width="1.5" stroke-dasharray="3 5"/>
+  <rect x="444" y="196" width="72" height="244" fill="#84bd41" fill-opacity="0.85"/>
 
-  <g stroke="#5e7d93" stroke-width="2" stroke-linecap="round">
-    <line x1="660" y1="420" x2="820" y2="420"/>
-    <line x1="700" y1="450" x2="900" y2="450"/>
-    <line x1="640" y1="480" x2="790" y2="480"/>
-    <line x1="720" y1="510" x2="860" y2="510"/>
-    <line x1="670" y1="540" x2="850" y2="540"/>
-  </g>
-  <circle cx="740" cy="420" r="6" fill="#5e7d93"/>
-  <circle cx="815" cy="450" r="6" fill="#84bd41"/>
-  <circle cx="705" cy="480" r="6" fill="#5e7d93"/>
-  <circle cx="845" cy="510" r="6" fill="#84bd41"/>
-  <circle cx="745" cy="540" r="6" fill="#5e7d93"/>
-
-  <rect x="584" y="586" width="280" height="8" rx="2" fill="#5e7d93" opacity="0.6"/>
-
-  <!-- brief stamp: generic identity mark, no article-specific metadata -->
-  <g transform="translate(1080,215) rotate(-12)">
-    <rect x="-124" y="-38" width="248" height="76" fill="none" stroke="#84bd41" stroke-width="4"/>
-    <rect x="-108" y="-22" width="216" height="44" fill="none" stroke="#84bd41" stroke-width="1.5" stroke-dasharray="2 6"/>
-    <text x="0" y="8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700" letter-spacing="2" fill="#84bd41">RESEARCH BRIEF</text>
+  <!-- The wordmark's bubbles. -->
+  <g fill="none" stroke-width="3">
+    <circle cx="1010" cy="345" r="185" stroke="#ffffff" stroke-opacity="0.14"/>
+    <circle cx="1152" cy="178" r="62" stroke="#1fa0db" stroke-opacity="0.85"/>
+    <circle cx="1244" cy="98" r="30" stroke="#84bd41" stroke-opacity="0.75"/>
   </g>
 </svg>
