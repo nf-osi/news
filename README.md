@@ -62,6 +62,7 @@ Current tags (shared with research briefs — see below):
 - `NF News`
 - `Open Access`
 - `Opportunity`
+- `Portal Update`
 - `Postdoc`
 - `Publication`
 - `Release`

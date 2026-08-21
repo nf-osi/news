@@ -9,9 +9,9 @@ authors:
     affiliationUrl: "https://sagebionetworks.org/"
     orcid: "0000-0003-1488-6730"
   
-excerpt: "The NF Data Portal has rolled out two search and discovery improvements: a switch to OpenSearch and the addition of an AI Portal Assistant. This brief covers both and goes more in-depth into how the Portal Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
+excerpt: "The NF Data Portal has rolled out two upgrades to search and discovery: a switch to OpenSearch and the addition of an AI Portal Assistant. This brief covers both, going in depth on how the Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
 tags:
-  - "New Feature"
+  - "Portal Update"
   - "Featured"
 assets:
   - name: "nf-osi/kg-pipeline"
@@ -111,7 +111,7 @@ Researchers can try these example questions from our benchmark. On the [portal](
 
 <!-- include: table1-high-impact.html -->
 
-Lastly, we're even open to community naming suggestions for something other than "Portal Assistant"! And if you'd like to collaborate, reach out to nfosi@sagebionetworks.org.
+Lastly, we're even open to community naming suggestions for something other than "Portal Assistant"! And if you'd like to collaborate, reach out to [nfosi@sagebionetworks.org](mailto:nfosi@sagebionetworks.org).
 
 ## Acknowledgements
 
