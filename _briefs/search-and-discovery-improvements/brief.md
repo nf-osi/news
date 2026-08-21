@@ -12,6 +12,16 @@ authors:
 excerpt: "The NF Data Portal has rolled out two search and discovery improvements: a switch to OpenSearch and the addition of an AI Portal Assistant. This brief covers both and goes more in-depth into how the Portal Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
 tags:
   - "New Feature"
+assets:
+  - name: "nf-osi/kg-pipeline"
+    url: "https://github.com/nf-osi/kg-pipeline"
+    type: "code"
+  - name: "nf-osi/asta-bench"
+    url: "https://github.com/nf-osi/asta-bench"
+    type: "code"
+license:
+  name: "CC BY 4.0"
+  url: "https://creativecommons.org/licenses/by/4.0/"
 ---
 
 ## Introduction
@@ -104,7 +114,3 @@ If you'd like to collaborate, contact nfosi@sagebionetworks.org.
 ## Acknowledgements
 
 This work was made possible with funding from the [Gilbert Family Foundation](https://gilbertfamilyfoundation.org/).
-
----
-
-*The pipeline, evaluation datasets, and eval harness are open source: [nf-osi/kg-pipeline](https://github.com/nf-osi/kg-pipeline) and [nf-osi/asta-bench](https://github.com/nf-osi/asta-bench). Full results for every run and every model are on the [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), published from `evaluation/runs.json` and `evaluation/pubs_runs.json`.*
