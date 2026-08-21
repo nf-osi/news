@@ -12,6 +12,7 @@ authors:
 excerpt: "The NF Data Portal has rolled out two search and discovery improvements: a switch to OpenSearch and the addition of an AI Portal Assistant. This brief covers both and goes more in-depth into how the Portal Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
 tags:
   - "New Feature"
+  - "Featured"
 assets:
   - name: "nf-osi/kg-pipeline"
     url: "https://github.com/nf-osi/kg-pipeline"
