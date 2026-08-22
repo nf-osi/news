@@ -133,6 +133,17 @@
   @apply my-0;
 }
 
+/* Pagination controls PaginatedContent inserts after any table[data-paginate]
+   (see src/app/_components/paginated-content.tsx). Sits outside the
+   [data-table-scroll] wrapper, so it stays put while the table scrolls. */
+.brief-body .table-pagination {
+  @apply mb-10 mt-4 flex items-center justify-center gap-4 text-sm text-ink-300 dark:text-slate-400;
+}
+
+.brief-body .table-pagination button {
+  @apply rounded-md border border-card-line px-3 py-1 font-medium text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-600 disabled:pointer-events-none disabled:opacity-40 dark:border-ink-700 dark:text-slate-300 dark:hover:bg-ink-700 dark:hover:text-white;
+}
+
 .brief-body figure {
   @apply my-10;
 }
@@ -143,4 +154,51 @@
 
 .brief-body figcaption {
   @apply mt-3 text-sm leading-relaxed text-ink-300 dark:text-slate-400;
+}
+
+/* Code blocks -------------------------------------------------------------
+   Fenced code is highlighted at build time by rehype-pretty-code/Shiki (see
+   src/lib/renderMarkdown.ts), which wraps each block in its own <figure> and
+   writes every token's color twice, as `--shiki-light`/`--shiki-dark` custom
+   properties, rather than picking one. These rules just read whichever one
+   matches the `.dark` class theme-switcher.tsx toggles on <html>. */
+
+.article-body [data-rehype-pretty-code-figure],
+.brief-body [data-rehype-pretty-code-figure] {
+  @apply my-6;
+}
+
+.brief-body > [data-rehype-pretty-code-figure] {
+  max-width: 100%;
+}
+
+.article-body pre,
+.brief-body pre {
+  @apply overflow-x-auto rounded-lg border border-card-line bg-ink-50 py-4 text-[0.9em] leading-relaxed dark:border-ink-700 dark:bg-black/30;
+}
+
+.article-body pre code,
+.brief-body pre code {
+  @apply grid font-mono;
+}
+
+.article-body pre [data-line],
+.brief-body pre [data-line] {
+  @apply px-4;
+}
+
+.article-body pre span,
+.brief-body pre span {
+  color: var(--shiki-light);
+}
+
+html.dark .article-body pre span,
+html.dark .brief-body pre span {
+  color: var(--shiki-dark);
+}
+
+/* Inline code, e.g. `syn20812185` — not touched by the highlighter. */
+.article-body :not(pre) > code,
+.brief-body :not(pre) > code {
+  @apply rounded bg-ink-50 px-1.5 py-0.5 font-mono text-[0.9em] text-ink-900 dark:bg-ink-800 dark:text-slate-200;
 }
