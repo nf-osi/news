@@ -144,3 +144,91 @@
 .brief-body figcaption {
   @apply mt-3 text-sm leading-relaxed text-ink-300 dark:text-slate-400;
 }
+
+/* Brief figures (SVG) ---------------------------------------------------
+   The SVGs carry no colors of their own so they follow the theme like the rest of the page: marks take a
+   brand step chosen per mode for contrast against that mode's surface, and
+   text uses the same ink tokens as the surrounding prose rather than the
+   series color. Values are direct-labelled in the figure, which is also the
+   relief for marks that sit near the 3:1 contrast floor. */
+
+.brief-body svg.kgfig {
+  @apply my-2 h-auto w-full overflow-visible;
+}
+
+/* One hue per figure — every one of these is a single series, so the bars are
+   not colored by their own value. */
+.brief-body .kgfig-bar,
+.brief-body .kgfig-dot {
+  @apply fill-brand-300 dark:fill-brand-200;
+}
+
+.brief-body .kgfig-line {
+  @apply fill-none stroke-brand-300 dark:stroke-brand-200;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* The 2px surface ring keeps a marker legible where it crosses the line or
+   its partner in a dumbbell. */
+.brief-body .kgfig-dot {
+  @apply stroke-white dark:stroke-ink-900;
+  stroke-width: 2;
+}
+
+.brief-body .kgfig-dot-hollow {
+  @apply fill-white stroke-brand-300 dark:fill-ink-900 dark:stroke-brand-200;
+  stroke-width: 2;
+}
+
+.brief-body .kgfig-track {
+  @apply stroke-brand-100 dark:stroke-brand-400;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.brief-body .kgfig-grid {
+  @apply stroke-card-line dark:stroke-ink-700;
+  stroke-width: 1;
+}
+
+.brief-body .kgfig-axis,
+.brief-body .kgfig-muted,
+.brief-body .kgfig-label,
+.brief-body .kgfig-value,
+.brief-body .kgfig-series {
+  @apply fill-ink-500 dark:fill-slate-400;
+  font-size: 13px;
+}
+
+.brief-body .kgfig-label,
+.brief-body .kgfig-value {
+  @apply fill-ink-900 dark:fill-white;
+}
+
+.brief-body .kgfig-value {
+  @apply font-bold;
+}
+
+.brief-body .kgfig-muted {
+  font-size: 12px;
+}
+
+.brief-body .kgfig-series {
+  font-size: 12px;
+}
+
+.brief-body .kgfig-mono,
+.brief-body .kgfig-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.brief-body .kgfig-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.brief-body figcaption code {
+  @apply rounded bg-brand-50 px-1 py-0.5 text-xs dark:bg-ink-800;
+}
