@@ -1,7 +1,7 @@
 ---
 title: "Faster search, deeper answers: modernizing discovery on the NF Data Portal"
 # alt title: "Find more, ask anything: search and discovery improvements on the NF Data Portal"
-date: "2026-08-17T00:00:00.000Z"
+date: "2026-08-21T00:00:00.000Z" # TODO: update to actual publish date/time
 authors:
   - name: Anh Nguyet Vu
     url: "https://github.com/anngvu"
@@ -24,7 +24,7 @@ license:
 
 ## Introduction
 
-A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: show studies by a specific investigator name, find datasets filtered by data type and funder, find an animal model that mentions "glioma". The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. Others are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a time-constrained drug screen*; answering this means understanding domain-specific criteria and applying a range filter on doubling time (<48 hours), while also checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
+A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: show studies by a specific investigator name, find datasets filtered by data type and funder, find an animal model that mentions "glioma". The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. Others are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a time-constrained drug screen*; answering this means understanding domain-specific criteria and applying a range filter on doubling time (<48 hours) and checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
 
 Last quarter, the portal greatly upgraded its capability for both kinds of questions with the migration to OpenSearch and the alpha release of the AI Portal Assistant. We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that in-store experience, handling the kind of resource research and exploration the search box alone cannot.
 
