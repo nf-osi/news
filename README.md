@@ -7,6 +7,8 @@ A statically generated site for the [NF Open Science Initiative](https://nf.syna
 
 See "Adding a new post" and "Adding a new research brief" below for each.
 
+Both content types share one Markdown pipeline (`src/lib/renderMarkdown.ts`). Fenced code blocks are syntax-highlighted at build time with [Shiki](https://shiki.style) via `rehype-pretty-code` — write the language after the opening fence (` ```r `, ` ```python `, ` ```bash `, ...) and it's highlighted with no further setup; an unrecognized or omitted language just renders unhighlighted. Highlighting covers both color themes this site supports (`src/app/prose.css` picks the right one off the `.dark` class `theme-switcher.tsx` toggles), so there's nothing to configure per light/dark.
+
 ## Adding a new post
 
 1. Create a new Markdown file in [`_posts/`](./_posts), named after the post's slug (e.g. `_posts/my-new-post.md`). The filename becomes the URL: `/posts/my-new-post`.
@@ -124,13 +126,15 @@ Briefs are a separate content type from blog posts — multi-author scientific d
 
    Each asset takes an optional `type` — `data`, `code`, `document`, or `link` (the default) — which picks its icon. Every rail field renders only when the brief supplies it, so omitting a key leaves no empty row or heading behind.
 
-2. **Raw HTML (tables, figures)**: `remark-html`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to `brief.md` (e.g. `_briefs/<slug>/table.html`, `_briefs/<slug>/fig1.html`) and reference it from the Markdown body with an include marker on its own line:
+2. **Raw HTML (tables, figures)**: `renderMarkdown`'s default sanitizer silently strips raw HTML blocks from Markdown. Put raw HTML in its own file next to `brief.md` (e.g. `_briefs/<slug>/table.html`, `_briefs/<slug>/fig1.html`) and reference it from the Markdown body with an include marker on its own line:
 
    ```md
    <!-- include: table.html -->
    ```
 
    `src/lib/briefMarkdownToHtml.ts` splices the referenced file's contents in verbatim at that exact spot — the surrounding prose still renders through the normal Markdown pipeline, but the included file is never sanitized. Figure images referenced from an include file go in `public/assets/briefs/<slug>/`.
+
+   A long table reads better paginated than scrolled through in full: give the `<table>` a `data-paginate="<rows per page>"` attribute (see `_briefs/druid-analysis-jhu-biobank-data/table.html`) and `src/app/_components/paginated-content.tsx` hydrates it client-side with Previous/Next controls, hiding all but the current page's `<tbody>` rows. Without JS the full table still renders — pagination is progressive enhancement, not a requirement for the content to be readable. Omit the attribute for tables short enough to just read top to bottom.
 
 3. Run `npm run dev` and check `http://localhost:3000/briefs/<slug>` before committing.
 
