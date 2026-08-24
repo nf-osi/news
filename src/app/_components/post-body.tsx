@@ -1,3 +1,5 @@
+import { PaginatedContent } from "@/app/_components/paginated-content";
+
 type Props = {
   content: string;
   /** Picks the stylesheet in src/app/prose.css and the column treatment. */
@@ -11,10 +13,7 @@ export function PostBody({ content, variant = "post" }: Props) {
     // break out past the text; `min-w-0` keeps a wide table from stretching
     // the grid column this sits in.
     <div className={isBrief ? "min-w-0" : "mx-auto max-w-2xl"}>
-      <div
-        className={isBrief ? "brief-body" : "article-body"}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <PaginatedContent className={isBrief ? "brief-body" : "article-body"} html={content} />
     </div>
   );
 }

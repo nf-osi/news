@@ -1,7 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import renderMarkdown from "@/lib/renderMarkdown";
 import { withBasePath } from "@/lib/base-path";
 
 // Matches a standalone "<!-- include: filename.html -->" line.
@@ -35,11 +34,11 @@ function applyBasePathToAssetSrcs(rawHtml: string) {
   );
 }
 
-// remark-html sanitizes raw HTML out of the output by default, which would
-// silently drop hand-authored blocks like data tables and figures. Splitting
-// on include markers lets those blocks be spliced in verbatim from their own
-// file, while the surrounding prose still renders through the normal
-// Markdown pipeline.
+// renderMarkdown() sanitizes raw HTML out of the output by default, which
+// would silently drop hand-authored blocks like data tables and figures.
+// Splitting on include markers lets those blocks be spliced in verbatim from
+// their own file, while the surrounding prose (including fenced code blocks)
+// still renders through the normal Markdown pipeline.
 export default async function briefMarkdownToHtml(
   markdown: string,
   baseDir: string,
@@ -54,10 +53,7 @@ export default async function briefMarkdownToHtml(
           labelFigureCaptions(applyBasePathToAssetSrcs(raw)),
         );
       }
-      return remark()
-        .use(html)
-        .process(segment)
-        .then((result) => result.toString());
+      return renderMarkdown(segment);
     }),
   );
   return rendered.join("\n");
