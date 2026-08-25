@@ -24,7 +24,7 @@ license:
 
 ## Introduction
 
-A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: show studies by a specific investigator name, find datasets filtered by data type and funder, find an animal model that mentions "glioma". The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. Others are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a time-constrained drug screen*; answering this means understanding domain-specific criteria and applying a range filter on doubling time and checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
+A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: show studies by a specific investigator name, find datasets filtered by data type and funder, find an animal model that mentions "glioma". The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. Others are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a drug screen*; answering this means understanding domain-specific criteria and applying a range filter on doubling time and checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
 
 Last quarter, the portal greatly upgraded its capability for both kinds of questions with the migration to OpenSearch and the alpha release of the AI Portal Assistant. We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that in-store experience, handling the kind of resource research and exploration the search box alone cannot.
 
@@ -42,7 +42,7 @@ The Portal Assistant can pull from multiple knowledge sources, some of which is 
 
 <!-- TODO: screenshot of the Portal Assistant chat dialog -->
 
-However, before it can serve users, we anticipate the question "Is it trustworthy?" In development and testing, we address this by running evaluations with custom benchmark datasets using our version of [AstaBench](https://github.com/allenai/asta-bench). While we have many different evaluations, we focus on explaining the Assistant's expected performance with two evaluations in particular: one for portal search and discovery, and one for literature question-answering accuracy.
+However, before it can serve users, we anticipate the question "Is it trustworthy?" The Assistant has been developed with design and testing with this very much in mind. One feature users can use directly is the "Trace" element in the interface, which reveals model thinking so that users can verify reasoning. We are more likely to trust something or someone if we can see the thinking, especially if we are able to see that it resembles ours and there were no misunderstandings. The other useful piece to is the data and metrics presented here. We run evaluations with custom benchmark datasets upon a version of [AstaBench](https://github.com/allenai/asta-bench), and the results are analyzed not only at the metrics level but also poured over at the transcript detail. While we have many different evaluations, we focus on explaining the Assistant's expected performance with two evaluations in particular: one for portal search and discovery, and one for literature question-answering accuracy.
 
 Note that the Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below is claude-sonnet-5, the model currently serving the Assistant on the portal.** These are therefore the results a researcher can expect today, not the best score we have ever recorded. The full data covering every model and both question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
 
@@ -56,7 +56,7 @@ Difficulty does indeed affect accuracy. Questions the curators marked "baseline"
 
 Aside from the baseline/advanced axis, search questions were characterized by how "painful" they were to portal users. Again, search and faceting can return some results, but for "painful" questions the user needs additional work to piece together the final answer, sometimes resorting to obscure or impossible workarounds. 
 
-The figure below shows that the Assistant outperforms search on more painful questions. This is in part because the agent can use richer, pre-connected information in the knowledge graph, or because it can perform analytical steps that simple search retrieval cannot, making some of the connections *for* the user. If the Assistant were only good at what search is already good at, the line would fall off a cliff at the right-hand end. Instead, on the twenty questions rated on the highest end of pain, it still returns two thirds of the expected resources. Put the other way, 16 of the 27 questions on the harder end on the current portal were answered perfectly.
+The figure below shows that the Assistant outperforms search on more painful questions. This is in part because the agent can use richer, pre-connected information in the knowledge graph, or because it can perform analytical steps that simple search retrieval cannot, making some of the connections *for* the user. If the Assistant were only good at what search is already good at, the line would fall off a cliff at the right-hand end. Instead, on the twenty questions rated on the highest end of pain, it still returns two thirds of the expected resources. That is, 16 of the 27 questions on the harder end on the current portal were answered perfectly.
 
 
 <!-- include: fig1-portal-pain.html -->
@@ -66,6 +66,7 @@ But the figure below shows where the Assistant still falls short. Animal models 
 
 <!-- include: fig2-category.html -->
 
+One important note is that even the easiest question takes a couple of questions, slower than the search box. Considering that the Assistant is slower overall, again much of its benefit is for the more complex questions. For one-off straightforward queries such as finding a study by an exact name, using the search box is still highly recommended.
 
 ### Can it be trusted about the literature?
 
