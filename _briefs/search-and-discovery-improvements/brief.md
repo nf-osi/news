@@ -8,6 +8,16 @@ authors:
     affiliation: Sage Bionetworks
     affiliationUrl: "https://sagebionetworks.org/"
     orcid: "0000-0003-1488-6730"
+  - name: Belinda Garana
+    url: "https://github.com/BelindaBGarana"
+    affiliation: Sage Bionetworks
+    affiliationUrl: "https://sagebionetworks.org/"
+    orcid: "0000-0001-8906-5270"
+  - name: Robert Allaway
+    url: "https://github.com/allaway"
+    affiliation: Sage Bionetworks
+    affiliationUrl: "https://sagebionetworks.org/"
+    orcid: "0000-0003-3573-3565"
   
 excerpt: "The NF Data Portal has rolled out two upgrades to search and discovery: a switch to OpenSearch and the addition of an AI Portal Assistant. This brief covers both, going in depth on how the Assistant is built and, more importantly, how we measure whether it's trustworthy enough to put in front of researchers."
 tags:
