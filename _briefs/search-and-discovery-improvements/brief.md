@@ -13,6 +13,10 @@ authors:
     affiliation: Sage Bionetworks
     affiliationUrl: "https://sagebionetworks.org/"
     orcid: "0000-0001-8906-5270"
+  - name: James Moon # missing orcid
+    url: "https://github.com/changtotheintothemoon"
+    affiliation: Sage Bionetworks
+    affiliationUrl: "https://sagebionetworks.org/"
   - name: Robert Allaway
     url: "https://github.com/allaway"
     affiliation: Sage Bionetworks
