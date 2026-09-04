@@ -1,0 +1,746 @@
+[
+ {
+  "run": "2026-08-18T16-08-54-07-00_nf-rag_kbGEcRGoBsH9mFJqUJeUmh",
+  "model": "anthropic/claude-sonnet-5",
+  "solver": "basic_agent",
+  "score": 0.8038045889763893,
+  "cost": 3.82,
+  "task_name": "astabench/nf_rag",
+  "task_version": "v1.3",
+  "total_samples": 46,
+  "started_at": "2026-08-18T16:08:54-07:00",
+  "completed_at": "2026-08-18T16:11:35-07:00",
+  "git_commit": "aa78cfa",
+  "score_stderr": 0.05012357152292112,
+  "min_sample_time": 3.782,
+  "max_sample_time": 144.718,
+  "avg_sample_time": 23.687173913043477,
+  "input_tokens": 568,
+  "output_tokens": 75054,
+  "cache_write_tokens": 843932,
+  "cache_read_tokens": 4775053,
+  "total_tokens": 5694607,
+  "difficulty_scores": {
+   "level/baseline": 0.95625,
+   "complexity/0-hop": 0.9555555555555556,
+   "level/advanced": 0.6988733488733488,
+   "complexity/1-hop": 0.7916666666666667,
+   "complexity/2-hop": 0.7086700336700337,
+   "complexity/3-hop": 0.5
+  },
+  "category_scores": {
+   "category/AB": 1,
+   "category/AM": 0.5833333333333334,
+   "category/CL": 0.8333333333333334,
+   "category/CR": 0.7083333333333334,
+   "category/GR": 0.9,
+   "category/MUT": 0.9791666666666666,
+   "category/PI": 1,
+   "category/PUB": 0.6969696969696969,
+   "category/ST": 0.7811111111111111
+  },
+  "frustration_scores": {
+   "frustration/low": 0.9375,
+   "frustration/moderate": 0.9821428571428571,
+   "frustration/high": 0.8412698412698413,
+   "frustration/very_high": 0.6640909090909091
+  },
+  "frustration_samples": [
+   {
+    "id": "AB-001",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "AB-002",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "AB-003",
+    "frustration": "high",
+    "score": 1
+   },
+   {
+    "id": "AM-001",
+    "frustration": "low",
+    "score": 0.5
+   },
+   {
+    "id": "AM-002",
+    "frustration": "high",
+    "score": 1
+   },
+   {
+    "id": "AM-003",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "AM-004",
+    "frustration": "very_high",
+    "score": 0
+   },
+   {
+    "id": "AM-005",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "AM-006",
+    "frustration": "very_high",
+    "score": 0
+   },
+   {
+    "id": "CL-001",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "CL-002",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "CL-003",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "CL-004",
+    "frustration": "low",
+    "score": 0.8333333333333334
+   },
+   {
+    "id": "CL-005",
+    "frustration": "high",
+    "score": 1
+   },
+   {
+    "id": "CL-006",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "CL-007",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "CL-008",
+    "frustration": "very_high",
+    "score": 0
+   },
+   {
+    "id": "CL-009",
+    "frustration": "very_high",
+    "score": 0.6666666666666666
+   },
+   {
+    "id": "CR-001",
+    "frustration": "high",
+    "score": 0.5
+   },
+   {
+    "id": "CR-002",
+    "frustration": "very_high",
+    "score": 0.3333333333333333
+   },
+   {
+    "id": "CR-003",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "CR-004",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "GR-001",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "GR-002",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "GR-003",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "GR-004",
+    "frustration": "high",
+    "score": 0.5
+   },
+   {
+    "id": "GR-005",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "MUT-001",
+    "frustration": "moderate",
+    "score": 0.875
+   },
+   {
+    "id": "MUT-002",
+    "frustration": "moderate",
+    "score": 1
+   },
+   {
+    "id": "MUT-003",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "MUT-004",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "MUT-005",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "MUT-006",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "PI-001",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "PI-002",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "PUB-001",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "PUB-002",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "PUB-003",
+    "frustration": "very_high",
+    "score": 0
+   },
+   {
+    "id": "PUB-004",
+    "frustration": "very_high",
+    "score": 0.18181818181818182
+   },
+   {
+    "id": "PUB-005",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "PUB-006",
+    "frustration": "very_high",
+    "score": 1
+   },
+   {
+    "id": "ST-001",
+    "frustration": "low",
+    "score": 0.9166666666666666
+   },
+   {
+    "id": "ST-002",
+    "frustration": "high",
+    "score": 1
+   },
+   {
+    "id": "ST-003",
+    "frustration": "very_high",
+    "score": 0.1
+   },
+   {
+    "id": "ST-004",
+    "frustration": "low",
+    "score": 1
+   },
+   {
+    "id": "ST-005",
+    "frustration": "high",
+    "score": 0.8888888888888888
+   }
+  ],
+  "level_samples": [
+   {
+    "id": "AB-001",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "AB-002",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "AB-003",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "AM-001",
+    "level": "baseline",
+    "score": 0.5
+   },
+   {
+    "id": "AM-002",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "AM-003",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "AM-004",
+    "level": "advanced",
+    "score": 0
+   },
+   {
+    "id": "AM-005",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "AM-006",
+    "level": "advanced",
+    "score": 0
+   },
+   {
+    "id": "CL-001",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "CL-002",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "CL-003",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "CL-004",
+    "level": "baseline",
+    "score": 0.8333333333333334
+   },
+   {
+    "id": "CL-005",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "CL-006",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "CL-007",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "CL-008",
+    "level": "advanced",
+    "score": 0
+   },
+   {
+    "id": "CL-009",
+    "level": "advanced",
+    "score": 0.6666666666666666
+   },
+   {
+    "id": "CR-001",
+    "level": "advanced",
+    "score": 0.5
+   },
+   {
+    "id": "CR-002",
+    "level": "advanced",
+    "score": 0.3333333333333333
+   },
+   {
+    "id": "CR-003",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "CR-004",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "GR-001",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "GR-002",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "GR-003",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "GR-004",
+    "level": "advanced",
+    "score": 0.5
+   },
+   {
+    "id": "GR-005",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "MUT-001",
+    "level": "baseline",
+    "score": 0.875
+   },
+   {
+    "id": "MUT-002",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "MUT-003",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "MUT-004",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "MUT-005",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "MUT-006",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "PI-001",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "PI-002",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "PUB-001",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "PUB-002",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "PUB-003",
+    "level": "advanced",
+    "score": 0
+   },
+   {
+    "id": "PUB-004",
+    "level": "advanced",
+    "score": 0.18181818181818182
+   },
+   {
+    "id": "PUB-005",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "PUB-006",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "ST-001",
+    "level": "baseline",
+    "score": 0.9166666666666666
+   },
+   {
+    "id": "ST-002",
+    "level": "advanced",
+    "score": 1
+   },
+   {
+    "id": "ST-003",
+    "level": "advanced",
+    "score": 0.1
+   },
+   {
+    "id": "ST-004",
+    "level": "baseline",
+    "score": 1
+   },
+   {
+    "id": "ST-005",
+    "level": "advanced",
+    "score": 0.8888888888888888
+   }
+  ],
+  "complexity_samples": [
+   {
+    "id": "AB-001",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "AB-002",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "AB-003",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "AM-001",
+    "complexity": "0-hop",
+    "score": 0.5
+   },
+   {
+    "id": "AM-002",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "AM-003",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "AM-004",
+    "complexity": "1-hop",
+    "score": 0
+   },
+   {
+    "id": "AM-005",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "AM-006",
+    "complexity": "1-hop",
+    "score": 0
+   },
+   {
+    "id": "CL-001",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-002",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-003",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-004",
+    "complexity": "0-hop",
+    "score": 0.8333333333333334
+   },
+   {
+    "id": "CL-005",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-006",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-007",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "CL-008",
+    "complexity": "2-hop",
+    "score": 0
+   },
+   {
+    "id": "CL-009",
+    "complexity": "1-hop",
+    "score": 0.6666666666666666
+   },
+   {
+    "id": "CR-001",
+    "complexity": "1-hop",
+    "score": 0.5
+   },
+   {
+    "id": "CR-002",
+    "complexity": "2-hop",
+    "score": 0.3333333333333333
+   },
+   {
+    "id": "CR-003",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "CR-004",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "GR-001",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "GR-002",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "GR-003",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "GR-004",
+    "complexity": "1-hop",
+    "score": 0.5
+   },
+   {
+    "id": "GR-005",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "MUT-001",
+    "complexity": "1-hop",
+    "score": 0.875
+   },
+   {
+    "id": "MUT-002",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "MUT-003",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "MUT-004",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "MUT-005",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "MUT-006",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "PI-001",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "PI-002",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "PUB-001",
+    "complexity": "0-hop",
+    "score": 1
+   },
+   {
+    "id": "PUB-002",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "PUB-003",
+    "complexity": "3-hop",
+    "score": 0
+   },
+   {
+    "id": "PUB-004",
+    "complexity": "2-hop",
+    "score": 0.18181818181818182
+   },
+   {
+    "id": "PUB-005",
+    "complexity": "3-hop",
+    "score": 1
+   },
+   {
+    "id": "PUB-006",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "ST-001",
+    "complexity": "1-hop",
+    "score": 0.9166666666666666
+   },
+   {
+    "id": "ST-002",
+    "complexity": "2-hop",
+    "score": 1
+   },
+   {
+    "id": "ST-003",
+    "complexity": "2-hop",
+    "score": 0.1
+   },
+   {
+    "id": "ST-004",
+    "complexity": "1-hop",
+    "score": 1
+   },
+   {
+    "id": "ST-005",
+    "complexity": "2-hop",
+    "score": 0.8888888888888888
+   }
+  ],
+  "task_stats": {}
+ }
+]
