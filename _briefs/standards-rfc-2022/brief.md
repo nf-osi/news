@@ -39,6 +39,16 @@ communityContributors:
   - Tom Reh
   - Eva Trevisson
 excerpt: "This document describes data types and formats that should be shared by the Neurofibromatosis (NF) research community for the NF Data Portal."
+license:
+  name: "CC BY 4.0"
+  url: "https://creativecommons.org/licenses/by/4.0/"
+assets:
+  - name: "RFC survey responses"
+    url: "https://github.com/nf-osi/research/blob/main/materials/rfc/rfc_responses.csv"
+    type: data
+  - name: "Analysis code"
+    url: "https://github.com/nf-osi/research/blob/main/rfc-brief.Rmd"
+    type: code
 ---
 
 ## Abstract
