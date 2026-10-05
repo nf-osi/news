@@ -44,11 +44,11 @@ Last quarter, the portal greatly upgraded its capability for both kinds of quest
 
 ## OpenSearch
 
-Going from MySQL full-text to [OpenSearch](https://opensearch.org/) provides a faster, more forgiving search box meant for most searches. The new autosuggest aids search by showing potential queries as one starts typing. Modern text analyzers and custom synonym configuration let researchers use shorthand terms and eliminate the need for perfect spelling or phrasing. And OpenSearch stays fast at scale, [generally getting faster with each new release](https://opensearch.org/blog/opensearch-project-update-performance-progress-in-opensearch-3-0/), a crucial infrastructure investment for growing portal data.
+Going from MySQL full-text to [OpenSearch](https://opensearch.org/) provides a faster, more forgiving search box meant for most searches. Modern text analyzers and custom synonym configuration let researchers use shorthand terms and eliminate the need for perfect spelling or phrasing. The new autosuggest aids search by showing potential queries as one starts typing.
 
 <!-- include: autocomplete.html -->
 
-Behind the scenes, we can now fine-tune relevance ranking directly, deciding what additional data to index, what to boost, and how to keep improving results over time, giving us the control and ability to continuously improve that we didn't have with the old MySQL search.
+Behind the scenes, we can now fine-tune relevance ranking directly, deciding what additional data to index, what to boost, and how to keep improving results over time, giving us the control and ability to continuously improve that we didn't have with the old MySQL search. We publish benchmark results and continual improvements at this [public dashboard](https://nf-osi.github.io/opensearch-ops/).
 
 ## The Portal Assistant
 
