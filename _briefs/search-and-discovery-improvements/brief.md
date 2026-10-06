@@ -58,7 +58,7 @@ The Portal Assistant can pull from multiple knowledge sources, some of which is 
 
 However, before it can serve users, we anticipate the question "Is it trustworthy?" The Assistant has been developed with design and testing with this very much in mind. One feature users can use directly is the "Show Trace" element in the interface, which reveals model thinking so that users can verify reasoning. We are more likely to trust something or someone if we can see the thinking, especially if we are able to see that it resembles ours and there were no misunderstandings. The other useful piece to is the data and metrics presented here. We run evaluations with custom benchmark datasets upon a version of [AstaBench](https://github.com/allenai/asta-bench), and the results are analyzed not only at the metrics level but also poured over at the transcript detail. While we have many different evaluations, we focus on explaining the Assistant's expected performance with two evaluations in particular: one for portal search and discovery, and one for literature question-answering accuracy.
 
-Note that the Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below is claude-sonnet-5, the model currently serving the Assistant on the portal.** These are therefore the results a researcher can expect today, not the best score we have ever recorded. The full data covering every model and both question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
+Note that the Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below is claude-sonnet-5, the model currently serving the Assistant on the portal.** These are therefore the typical results a researcher can expect today. The full data covering every model and both question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
 
 ### Can it find the right resources?
 
@@ -116,11 +116,13 @@ The Pub QA is small because of the human curation. The question set has had one 
 
 ## How the community can collaborate
 
-The community can continue to [submit new tools](https://nf.synapse.org/Research%20Tools%20Central/Submit%20New%20Tool) or [observations](https://nf.synapse.org/Research%20Tools%20Central/Submit%20Observation) for improved search and discovery. Other than that, we also see the Assistant as something the community should help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and improved benchmarks developed with the help of NF experts and portal users. 
+The community can continue to [submit new tools](https://nf.synapse.org/Research%20Tools%20Central/Submit%20New%20Tool) or [observations](https://nf.synapse.org/Research%20Tools%20Central/Submit%20Observation) to ensure these resources show up in search and discovery. Other than that, we also see the Assistant as something the community can help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and improved benchmarks developed with the help of NF experts and portal users. 
 
-One part of that is having more people sit down and think about what meaningful questions to include in the first place. The Assistant might not seem trustworthy when it is not using the same reasoning that NF researchers use and expect, and that's another area that would benefit from NF expert input. 
+One part of that is having more people sit down and think about what meaningful questions to include in the first place. The Assistant might not seem trustworthy when it is not using the same reasoning that NF researchers use and expect, and that's another area where we welcome NF expert input. 
 
-Portal users can also help provide evaluation and feedback. If you have a resource-discovery question the portal handles poorly today, whether or not the Assistant does any better, let us know. If you'd like to collaborate, reach out to [nfosi@sagebionetworks.org](mailto:nfosi@sagebionetworks.org).
+Portal users can help provide evaluation and feedback. If you have a resource-discovery question the portal handles poorly today, whether or not the Assistant does any better, let us know. If you'd like to collaborate on benchmarking and evaluation, reach out to [nfosi@sagebionetworks.org](mailto:nfosi@sagebionetworks.org).
+
+If you have ideas for new features, you can submit them at [sageb.io/nf-roadmap](sageb.io/nf-roadmap). Lastly, feel free to [subscribe to our newsletter](https://sagebionetworks.us7.list-manage.com/subscribe?u=b146de537186191a9d2110f3a&id=063befda5a) to hear about the next features and enhancements.
 
 ## Acknowledgements
 
