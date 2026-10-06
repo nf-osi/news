@@ -68,7 +68,7 @@ For each question, the metric is recall over the expected identifiers. Put simpl
 
 Difficulty does indeed affect accuracy. Questions the curators marked "baseline" (answerable today with some patience on the portal) score 0.96. The "advanced" ones score 0.70.
 
-Aside from the baseline/advanced axis, search questions were characterized by how "painful" they were to portal users. Again, search and faceting can return some results, but for "painful" questions the user needs additional work to piece together the final answer, sometimes resorting to obscure or impossible workarounds. 
+Aside from the baseline/advanced axis, search questions were characterized by how "painful" they were to portal users. Again, while search and faceting can yield some results, for "painful" questions the user needs additional legwork to piece together the final answer, sometimes resorting to obscure or impossible workarounds. 
 
 The figure below shows that the Assistant outperforms search on more painful questions. This is in part because the agent can use richer, pre-connected information in the knowledge graph, or because it can perform analytical steps that simple search retrieval cannot, making some of the connections *for* the user. If the Assistant were only good at what search is already good at, the line would fall off a cliff at the right-hand end. Instead, on the twenty questions rated on the highest end of pain, it still returns two thirds of the expected resources. That is, 16 of the 27 questions on the harder end on the current portal were answered perfectly.
 
@@ -80,7 +80,7 @@ But the figure below shows where the Assistant still falls short. Animal models 
 
 <!-- include: fig2-category.html -->
 
-One important note is that even the easiest question takes a couple of questions, slower than the search box. Considering that the Assistant is slower overall, again much of its benefit is for the more complex questions. For one-off straightforward queries such as finding a study by an exact name, using the search box is still highly recommended.
+One important note is that even the easiest question is slower than the search box. Because the Assistant is slower overall, much of its benefit is on the more complex questions. For one-off straightforward queries such as finding a study by an exact name, using the search box is still highly recommended.
 
 ### Can it be trusted about the literature?
 
