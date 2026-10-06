@@ -120,13 +120,7 @@ We see the Assistant as something the community should help shape. The ability t
 
 One part of that is having more people sit down and think about what meaningful questions to include in the first place. The Assistant might not seem trustworthy when it is not using the same reasoning that NF researchers use and expect, and that's another area that would benefit from NF expert input. 
 
-Portal users can also help provide evaluation and feedback. If you have a resource-discovery question the portal handles poorly today, whether or not the Assistant does any better, let us know. 
-
-Researchers can try these example questions from our benchmark. On the [portal](https://nf.synapse.org), copy-and-paste them into the chat.
-
-<!-- include: table1-high-impact.html -->
-
-Lastly, we're even open to community naming suggestions for something other than "Portal Assistant"! And if you'd like to collaborate, reach out to [nfosi@sagebionetworks.org](mailto:nfosi@sagebionetworks.org).
+Portal users can also help provide evaluation and feedback. If you have a resource-discovery question the portal handles poorly today, whether or not the Assistant does any better, let us know. If you'd like to collaborate, reach out to [nfosi@sagebionetworks.org](mailto:nfosi@sagebionetworks.org).
 
 ## Acknowledgements
 
