@@ -1,7 +1,7 @@
 ---
 title: "Faster search, deeper answers: modernizing discovery on the NF Data Portal"
 # alt title: "Find more, ask anything: search and discovery improvements on the NF Data Portal"
-date: "2026-08-21T00:00:00.000Z" # TODO: update to actual publish date/time
+date: "2026-10-07T00:00:00.000Z" # TODO: update to actual publish date/time
 authors:
   - name: Anh Nguyet Vu
     url: "https://github.com/anngvu"
