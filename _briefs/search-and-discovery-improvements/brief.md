@@ -116,7 +116,7 @@ The Pub QA is small because of the human curation. The question set has had one 
 
 ## How the community can collaborate
 
-We see the Assistant as something the community should help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and improved benchmarks developed with the help of NF experts and portal users. 
+The community can continue to [submit new tools](https://nf.synapse.org/Research%20Tools%20Central/Submit%20New%20Tool) or [observations](https://nf.synapse.org/Research%20Tools%20Central/Submit%20Observation) for improved search and discovery. Other than that, we also see the Assistant as something the community should help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and improved benchmarks developed with the help of NF experts and portal users. 
 
 One part of that is having more people sit down and think about what meaningful questions to include in the first place. The Assistant might not seem trustworthy when it is not using the same reasoning that NF researchers use and expect, and that's another area that would benefit from NF expert input. 
 
