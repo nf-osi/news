@@ -108,7 +108,7 @@ We actually ran every question two ways: phrased with the exact terminology of t
 
 <!-- include: fig3-citation-type.html -->
 
-Citation F1 is strict by design. It penalizes both over-citing and under-citing, rather than just checking whether at least one correct reference showed up. We currentyly get **0.71 with precise phrasing and 0.68 when the question is asked naturally**. In practice, the Assistant reliably reaches the right conclusion while getting nearly a third of its supporting evidence wrong, citing "irrelevant" passages it did not need or omitting ones it did. For comparison, [Google AI overviews are accurate 85% to 91% of the time](https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html). The takeaway is still to check citations.
+Citation F1 is strict by design. It penalizes both over-citing and under-citing, rather than just checking whether at least one correct reference showed up. We get **0.71 with precise phrasing and 0.68 when the question is asked naturally**. In practice, the Assistant reliably reaches the right conclusion while getting nearly a third of its supporting evidence wrong, citing "irrelevant" passages it did not need or omitting ones it did. For comparison, [Google AI overviews are accurate 85% to 91% of the time](https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html). The takeaway is still to check citations.
 
 One other finding is *where* attribution breaks down. It varies by paper, and by more than twice as much.
 
