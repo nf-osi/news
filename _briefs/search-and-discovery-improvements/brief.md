@@ -47,7 +47,11 @@ The search box was meant to handle these, though our old MySQL full-text backend
 
 But other questions are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a drug screen*. Answering this means understanding domain-specific criteria and applying a range filter on doubling time or checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
 
-Last quarter, the portal significantly upgraded its capability for both kinds of questions with the migration to OpenSearch and the alpha release of the AI Portal Assistant. We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that second experience, handling the kind of resource research and exploration the search box alone cannot.
+Last quarter, the portal significantly upgraded its capability for both kinds of questions with these updates:
+1. Migration to OpenSearch
+2. Alpha release of the AI Portal Assistant
+
+We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that second experience, handling the kind of resource research and exploration the search box alone cannot.
 
 ## OpenSearch
 
@@ -63,12 +67,14 @@ The Portal Assistant can pull from multiple knowledge sources, some of which is 
 
 <!-- include: assistant-screenshots.html -->
 
-However, before it can serve users, we anticipate the question "Is it trustworthy?" The Assistant has been developed with design and testing with this very much in mind. One feature users can use directly is the "Show Trace" element in the interface, which reveals model thinking so that users can verify reasoning. We are more likely to trust something or someone if we can see the thinking, especially if we are able to see that it resembles ours and there were no misunderstandings. The other useful piece to is the data and metrics presented here. We run evaluations with custom benchmark datasets upon a version of [AstaBench](https://github.com/allenai/asta-bench), and the results are analyzed not only at the metrics level but also poured over at the transcript detail. While we have many different evaluations, we focus on explaining the Assistant's expected performance with two evaluations in particular: 
+However, before it can serve users, we anticipate the question "Is it trustworthy?" The Assistant has been developed with this at top of mind. Thus, seeing how we run testing and evaluation as part of quality assurance provides understanding of where to trust and where to remain conservative. 
+
+We run evaluations with custom benchmark datasets upon a version of [AstaBench](https://github.com/allenai/asta-bench), and the results are analyzed not only at the metrics level but also poured over at the transcript detail. While we have many different evaluations, we focus on explaining the Assistant's expected performance with two evaluations in particular: 
 
 - Portal help and discovery (Phd) evaluation
 - Literature question-answering evaluation
 
-The Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below reflects a configuration that has been deployed on the portal, and our aim would be to continue to improve on what's reported here.** These are therefore the typical results a researcher can expect today. The full data covering different models and question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
+The Assistant is based on a selected model, and the harness runs the same benchmarks against different models and prompts to understand our best configuration. **Everything reported below reflects a configuration that has been deployed on the portal, and our aim would be to continue to improve on what's reported here.** These are therefore the typical results a researcher can expect in the alpha release. The full data covering different models and question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which will be the best source for the latest evaluation results.
 
 ### Can it find the right resources?
 
@@ -96,7 +102,7 @@ One important note is that even the easiest question is slower than the search b
 
 The Portal Assistant was funded in some part because researchers were interested in a "chat with papers" feature. Currently, the Assistant can answer questions on 139 publications registered on the portal; publications are included if their license permits redistribution and derivative use, and if they are relevant to NF Tools Central, per our alpha-release scoping. 
 
-Our target accuracy of at least 95% was achieved, but citation capabilities could be improved. Accuracy measures how often the model selects the correct answer from a set of choices, which requires retrieving and understanding the right passage of the paper. Citation is scored with F1, measuring whether the model cited the exact references expected for the answer (papers have numbered passages to make it easier to validate). Both metrics were measured on our "Pub RAG" benchmark of 130 multiple-choice questions from 14 of the papers (about 10% of the total corpus), the same format used by well-known benchmarks [LitQA2](https://huggingface.co/datasets/futurehouse/lab-bench/viewer/LitQA2) and Humanity's Last Exam. Items were originally generated by diverse frontier models against full text, then reviewed and edited by the NF-OSI team.
+**We achieved our target accuracy of at least 95%**, but citation capabilities could be improved. Accuracy measures how often the model selects the correct answer from a set of choices, which requires retrieving and understanding the right passage of the paper. Citation is scored with F1, measuring whether the model cited the exact references expected for the answer (papers have numbered passages to make it easier to validate). Both metrics were measured on our "Pub RAG" benchmark of 130 multiple-choice questions from 14 of the papers (about 10% of the total corpus), the same format used by well-known benchmarks [LitQA2](https://huggingface.co/datasets/futurehouse/lab-bench/viewer/LitQA2) and Humanity's Last Exam. Items were originally generated by diverse frontier models against full text, then reviewed and edited by the NF-OSI team.
 
 Curation for this benchmark can be tricky, so it's not a perfect benchmark. As a pertinent example, an earlier version of Humanity's Last Exam was found to have roughly 30% of its text-only chemistry and biology questions in conflict with the peer-reviewed record. We had to resolve a similar issue: two indexed papers reported different NF1 population incidence as 1:2000 and 1:2500, so a question asking for "the" incidence had no correct answer and was dropped. Where a fact was only ambiguous rather than contradictory, the question could be made more specific instead of removed entirely.
 
