@@ -68,7 +68,7 @@ However, before it can serve users, we anticipate the question "Is it trustworth
 - Portal help and discovery (Phd) evaluation
 - Literature question-answering evaluation
 
-The Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below is on a model that has been deployed on the portal, and our aim would be to continue to improve on what's reported here.** These are therefore the typical results a researcher can expect today. The full data covering every model and both question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
+The Assistant is based on a selected model, and the harness runs the same benchmarks against several so we can see what we would gain or lose by switching. **Everything reported below reflects a configuration that has been deployed on the portal, and our aim would be to continue to improve on what's reported here.** These are therefore the typical results a researcher can expect today. The full data covering different models and question sets is published on our [evaluation dashboard](https://nf-osi.github.io/kg-pipeline/), which updates on new evaluations.
 
 ### Can it find the right resources?
 
@@ -104,17 +104,17 @@ Other problems were internal to individual questions. Generated ideal answers so
 
 **Accuracy is 100%** (130 of 130, under both phrasings), which may make this a too-easy evaluation. But it does suggest that the Assistant should be able to answer questions accurately from its current collection of papers.
 
-We actually ran every question two ways: phrased with the exact terminology of the paper, and phrased the way a user would actually ask in more informal language. Accuracy did not differ much between them. Practically, that means you do not have to use the paper's terminology to get the right answer. On the other hand, attribution differs a little, and it is the weak spot.
+We actually ran every question two ways: phrased with the exact terminology of the paper, and phrased the way a user would actually ask in more informal language. Accuracy did not differ much between them. Practically, that means you do not have to use the paper's terminology to get the right answer. On the other hand, attribution is a weaker spot.
 
 <!-- include: fig3-citation-type.html -->
 
-Citation F1 is strict by design. It penalizes both over-citing and under-citing, rather than just checking whether at least one correct reference showed up. For the deployed model it sits at **0.71 with precise phrasing and 0.68 when the question is asked naturally**. In practice, the Assistant reliably reaches the right conclusion while getting nearly a third of its supporting evidence wrong, citing "irrelevant" passages it did not need or omitting ones it did. For comparison, [Google AI overviews are accurate 85% to 91% of the time](https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html). The takeaway is still to check citations.
+Citation F1 is strict by design. It penalizes both over-citing and under-citing, rather than just checking whether at least one correct reference showed up. We currentyly get **0.71 with precise phrasing and 0.68 when the question is asked naturally**. In practice, the Assistant reliably reaches the right conclusion while getting nearly a third of its supporting evidence wrong, citing "irrelevant" passages it did not need or omitting ones it did. For comparison, [Google AI overviews are accurate 85% to 91% of the time](https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html). The takeaway is still to check citations.
 
 One other finding is *where* attribution breaks down. It varies by paper, and by more than twice as much.
 
 <!-- include: fig4-citation-paper.html -->
 
-A paper at 0.35 and a paper at 0.81 got every answer right. What differs is how cleanly each paper's passages map onto the claim being made. This does suggest reviewing curated citations to understand what's different between what we think should be cited vs what the agent thinks should be cited. 
+A paper at 0.35 and a paper at 0.81 got every answer right. What differs is how cleanly each paper's passages map onto the claim being made. This suggests reviewing curated citations to understand what's different between what we think should be cited vs what the agent thinks should be cited. 
 
 ### Limitations
 
@@ -126,7 +126,7 @@ The Pub QA is small because of the human curation. The question set has had one 
 
 ## How the community can collaborate
 
-The community can continue to [submit new tools](https://nf.synapse.org/Research%20Tools%20Central/Submit%20New%20Tool) or [observations](https://nf.synapse.org/Research%20Tools%20Central/Submit%20Observation) to ensure these resources show up in search and discovery. Other than that, we also see the Assistant as something the community can help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and improved benchmarks developed with the help of NF experts and portal users. 
+The community can continue to [submit new tools](https://nf.synapse.org/Research%20Tools%20Central/Submit%20New%20Tool) or [observations](https://nf.synapse.org/Research%20Tools%20Central/Submit%20Observation) to ensure important resources show up via the portal. Other than that, we also see the Assistant as something the community can help shape. The ability to answer "Is it trustworthy?" depends on having benchmark questions, and we could always use larger and better benchmarks developed with the help of NF experts and portal users. 
 
 One part of that is having more people sit down and think about what meaningful questions to include in the first place. The Assistant might not seem trustworthy when it is not using the same reasoning that NF researchers use and expect, and that's another area where we welcome NF expert input. 
 
