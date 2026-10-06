@@ -38,9 +38,16 @@ license:
 
 ## Introduction
 
-A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: show studies by a specific investigator name, find datasets filtered by data type and funder, find an animal model that mentions "glioma". The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. Others are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a drug screen*; answering this means understanding domain-specific criteria and applying a range filter on doubling time and checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
+A researcher can bring different kinds of questions to the NF Data Portal. Some are straightforward: 
+- show studies by a specific investigator name
+- find datasets filtered by data type and funder 
+- find an animal model that mentions "glioma"
 
-Last quarter, the portal significantly upgraded its capability for both kinds of questions with the migration to OpenSearch and the alpha release of the AI Portal Assistant. We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that in-store experience, handling the kind of resource research and exploration the search box alone cannot.
+The search box was meant to handle these, though our old MySQL full-text backend often fell short even here. 
+
+But other questions are harder than they look, like a researcher planning an experiment who needs *validated MPNST cell lines suitable for a drug screen*. Answering this means understanding domain-specific criteria and applying a range filter on doubling time or checking literature references for the "validated" part. While search can return a candidate list, the researcher still has to translate what they want into manual UI filtering, literature cross-references, and more lookups.
+
+Last quarter, the portal significantly upgraded its capability for both kinds of questions with the migration to OpenSearch and the alpha release of the AI Portal Assistant. We had in mind the shopping experience at [REI](https://www.rei.com/), where there's a very good product search box on the website, but also in-store staff for more research and consultation before dropping serious money on gear. The aim for the new Portal Assistant is to get closer to that second experience, handling the kind of resource research and exploration the search box alone cannot.
 
 ## OpenSearch
 
@@ -52,7 +59,7 @@ Behind the scenes, we can now fine-tune relevance ranking directly, deciding wha
 
 ## The Portal Assistant
 
-The Portal Assistant can pull from multiple knowledge sources, some of which is content that OpenSearch currently can't index or link: the NF knowledge graph, help docs, and a limited set of permissibly-licensed portal publications. So you *can* ask a basic help doc question, of course, but we also expect it to serve users better on those multi-step or highly-linked resource research and discovery questions. Two example interactions are illustrated below. 
+The Portal Assistant can pull from multiple knowledge sources, some of which is content that OpenSearch currently can't index or link: the NF knowledge graph, help docs, and a limited set of permissibly-licensed portal publications. So you *should* use it to ask a basic help doc question, but we also expect it to serve users better on those complex (multi-step, highly interconnected) resource research and discovery questions. Two example interactions are illustrated below. 
 
 <!-- include: assistant-screenshots.html -->
 
