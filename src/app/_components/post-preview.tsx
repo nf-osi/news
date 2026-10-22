@@ -8,7 +8,7 @@ import { PostTaxonomy } from "./post-taxonomy";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImage?: string;
   date: string;
   excerpt: string;
   authors: Author[];
@@ -32,9 +32,11 @@ export function PostPreview({
 }: Props) {
   return (
     <article>
-      <div className="mb-5">
-        <CoverImage href={`/posts/${slug}`} title={title} src={coverImage} />
-      </div>
+      {coverImage && (
+        <div className="mb-5">
+          <CoverImage href={`/posts/${slug}`} title={title} src={coverImage} />
+        </div>
+      )}
       <PostTaxonomy category={category} tags={tags} />
       <h3
         className={cn(

@@ -293,7 +293,7 @@ async function main() {
       `category: "${yamlEscape(categoryName)}"`,
       tags.length > 0 ? "tags:" : "tags: []",
       ...tags.map((tag) => `  - "${yamlEscape(tag)}"`),
-      "ogImage:",
+      coverImagePath ? "ogImage:" : null,
       coverImagePath ? `  url: "${coverImagePath}"` : null,
       "---",
       "",
