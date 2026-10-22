@@ -4,13 +4,13 @@ export type Post = {
   slug: string;
   title: string;
   date: string;
-  coverImage: string;
+  coverImage?: string;
   authors: Author[];
   excerpt: string;
   category: string;
   tags: string[];
-  ogImage: {
+  ogImage?: {
     url: string;
-  };
+  } | null;
   content: string;
 };
