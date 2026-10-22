@@ -1,10 +1,16 @@
 import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
-import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/constants";
+import {
+  GA_MEASUREMENT_ID,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+} from "@/lib/constants";
 import { BRAND_PRIMARY } from "@/lib/brand";
 import { withBasePath } from "@/lib/base-path";
 import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
+import Script from "next/script";
 import { ThemeScript } from "./_components/theme-switcher";
 
 import "./globals.css";
@@ -82,6 +88,16 @@ export default function RootLayout({
         <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
       </body>
     </html>
   );
